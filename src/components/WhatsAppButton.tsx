@@ -19,7 +19,7 @@ interface WhatsAppButtonProps {
 }
 
 export const WhatsAppButton = ({
-  phoneNumber = "+966500000000",
+  phoneNumber = "963937237163",
   defaultMessage = "السلام عليكم، أرغب في الاستفسار عن برامج تآلُف الفاخرة للأزواج.",
 }: WhatsAppButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
