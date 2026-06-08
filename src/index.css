@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Cairo", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-luxury-brand: #C5A880; /* Luxe Warm Gold */
+  --color-luxury-brand-hover: #B3966E;
+  --color-luxury-dark: #191614; /* Pure Rich Charcoal Noir */
+  --color-luxury-charcoal: #2A2521; /* Slightly lighter body background slate */
+  --color-luxury-cream: #FDFCF7; /* Lighter warm paper color */
+  --color-luxury-sand: #FAF9F5; /* Base ground premium cream */
+  --color-luxury-accent: #E5D5C0; /* Soft gold-rose glow */
+  --color-luxury-rose: #9E5B5B; /* Deep passionate rose */
+
+  --animate-gold-shimmer: gold-shimmer 3s ease-in-out infinite;
+  --animate-subtle-float: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes gold-shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Custom global overrides */
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  letter-spacing: -0.02em;
+}
+
+.serif-display {
+  font-family: var(--font-serif);
+}
+
+/* Smooth custom scrollbar for luxury brand style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-luxury-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-luxury-brand);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-luxury-brand-hover);
+}
+
+/* Luxury card-overlay hover shadow */
+.luxury-shadow-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(25, 22, 20, 0.08);
+}

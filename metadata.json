@@ -1,0 +1,6 @@
+{
+  "name": "تآلُف | لرحلات الأزواج الفاخرة",
+  "description": "منصة راقية لتصميم رحلات استثنائية للأزواج في تركيا. نعتني بكافة التفاصيل لتجربة زوجية ملهمة وتجديد حقيقي للوصال دون تشتت أو عناء.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
