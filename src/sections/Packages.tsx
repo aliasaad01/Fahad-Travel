@@ -19,7 +19,7 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
 
   const handleWhatsAppInquiry = (msg: string) => {
     const encoded = encodeURIComponent(msg);
-    window.open(`https://wa.me/966500000000?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
   };
 
   const badgeIcons = [

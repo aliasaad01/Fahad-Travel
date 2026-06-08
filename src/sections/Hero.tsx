@@ -27,7 +27,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
     const encoded = encodeURIComponent(
       hero.subheadline + " أود استشارة حول تنظيم رحلة فاخرة للأزواج.",
     );
-    window.open(`https://wa.me/966500000000?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
   };
 
   return (

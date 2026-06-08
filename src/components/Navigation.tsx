@@ -33,7 +33,7 @@ export const Navigation = ({
     const encoded = encodeURIComponent(
       "مرحباً تآلُف، أريد استشارتكم لتصميم رحلة استثنائية للأزواج بتركيا.",
     );
-    window.open(`https://wa.me/966500000000?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
   };
 
   return (
