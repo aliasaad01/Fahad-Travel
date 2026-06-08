@@ -83,7 +83,7 @@ export const Problem = () => {
                 </div>
 
                 <span className="text-[10px] text-stone-500 font-sans block mt-4 self-end bg-white/5 px-2 py-0.5 rounded-md">
-                  عثرة رقم {idx + 1}
+                  {idx + 1}
                 </span>
               </motion.div>
             );
