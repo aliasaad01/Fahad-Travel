@@ -1,28 +1,33 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 import React from "react";
 import { cn } from "../utils/cn";
 
-// 1. نقل الكلاسات خارج المكون لمنع إعادة تعريفها في الذاكرة
+// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإبهام (Touch Devices)
 const baseStyles =
-  "inline-flex items-center justify-center font-headline font-semibold rounded-full border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+  "inline-flex items-center justify-center font-headline font-semibold rounded-full border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] select-none touch-manipulation";
 
 const variants = {
   primary:
-    "bg-luxury-dark text-luxury-cream border-luxury-dark hover:bg-stone-800 hover:border-stone-800 shadow-sm focus:ring-luxury-dark",
+    "bg-luxury-dark text-luxury-cream border-luxury-dark md:hover:bg-stone-800 md:hover:border-stone-800 shadow-sm focus:ring-luxury-dark",
   secondary:
-    "bg-luxury-brand text-luxury-dark border-luxury-brand hover:bg-luxury-brand-hover hover:border-luxury-brand-hover shadow-sm focus:ring-luxury-brand",
+    "bg-luxury-brand text-luxury-dark border-luxury-brand md:hover:bg-luxury-brand-hover md:hover:border-luxury-brand-hover shadow-sm focus:ring-luxury-brand",
   outline:
-    "bg-transparent text-luxury-dark border-luxury-dark/20 hover:bg-luxury-dark hover:text-luxury-cream hover:border-luxury-dark focus:ring-luxury-dark",
+    "bg-transparent text-luxury-dark border-luxury-dark/20 md:hover:bg-luxury-dark md:hover:text-luxury-cream md:hover:border-luxury-dark focus:ring-luxury-dark",
   whatsapp:
-    "bg-[#25D366] text-white border-[#24c15d] hover:bg-[#20ba5a] shadow-[0_4px_14px_rgba(37,211,102,0.3)] focus:ring-[#25D366]",
+    "bg-[#25D366] text-white border-[#24c15d] md:hover:bg-[#20ba5a] shadow-[0_4px_14px_rgba(37,211,102,0.2)] focus:ring-[#25D366]",
   ghost:
-    "bg-transparent text-luxury-dark border-transparent hover:bg-luxury-dark/5 focus:ring-luxury-dark",
+    "bg-transparent text-luxury-dark border-transparent md:hover:bg-luxury-dark/5 focus:ring-luxury-dark",
 };
 
 const sizes = {
-  sm: "px-4 py-1.5 text-xs gap-1.5",
-  md: "px-6 py-2.5 text-sm gap-2",
-  lg: "px-8 py-3.5 text-base gap-2.5",
-  xl: "px-10 py-4.5 text-lg gap-3",
+  sm: "px-3.5 py-1.5 text-xs gap-1.5",
+  md: "px-5 py-2 sm:px-6 sm:py-2.5 text-xs sm:text-sm gap-2",
+  lg: "px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base gap-2.5",
+  xl: "px-7 py-3.5 sm:px-10 sm:py-4.5 text-base sm:text-lg gap-3",
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -53,29 +58,37 @@ export const Button = ({
         variants[variant],
         sizes[size],
         shimmer &&
-          "relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2.5s_infinite] before:bg-linear-to-r before:from-transparent before:via-white/10 before:to-transparent",
-        className, // الـ cn تضمن أن أي كلاس ممرر هنا يلغي الكلاسات المتضاربة السابقة بأمان
+          "relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2.5s_infinite] before:bg-linear-to-r before:from-transparent before:via-white/15 before:to-transparent",
+        className,
       )}
       disabled={disabled || isLoading}
       {...props}
     >
-      {/* مؤشر التحميل */}
+      {/* مؤشر التحميل - متناسق تلمسياً وحجمياً مع مقاس الأيقونة */}
       {isLoading && (
-        <span className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin shrink-0" />
+        <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-current border-t-transparent rounded-full animate-spin shrink-0" />
       )}
 
-      {/* الأيقونة اليسرى (تظهر فقط إذا لم يكن هناك تحميل) */}
+      {/* الأيقونة اليسرى */}
       {!isLoading && leftIcon && (
-        <span className="flex items-center shrink-0">{leftIcon}</span>
+        <span className="flex items-center shrink-0 w-4 h-4 sm:w-5 sm:h-5 justify-center">
+          {leftIcon}
+        </span>
       )}
 
-      {/* نص الزر */}
-      <span>{children}</span>
+      {/* نص الزر مع كسر السطور الآمن بالهواتف */}
+      <span className="whitespace-nowrap truncate max-w-full px-0.5">
+        {children}
+      </span>
 
       {/* الأيقونة اليمنى */}
       {!isLoading && rightIcon && (
-        <span className="flex items-center shrink-0">{rightIcon}</span>
+        <span className="flex items-center shrink-0 w-4 h-4 sm:w-5 sm:h-5 justify-center">
+          {rightIcon}
+        </span>
       )}
     </button>
   );
 };
+
+export default Button;
