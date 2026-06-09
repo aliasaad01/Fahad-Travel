@@ -4,14 +4,9 @@
  */
 
 import { useState, useEffect } from "react";
-import {
-  MessageCircle,
-  X,
-  Send,
-  ShieldCheck,
-  CornerDownLeft,
-} from "lucide-react";
+import { X, Send, ShieldCheck, CornerDownLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface WhatsAppButtonProps {
   phoneNumber?: string;
@@ -28,19 +23,24 @@ export const WhatsAppButton = ({
 
   const presets = [
     {
-      text: "عسل ملكي 💍 (شهر العسل)",
+      text: "باقة ذِكرى",
       message:
-        "السلام عليكم، مهتم بتفاصيل باقة الميثاق الأبدي لشهر العسل الملكي في إسطنبول والبوسفور.",
+        "السلام عليكم، مهتم بتفاصيل باقة ذِكرى، ما تفاصيل هذه الباقة وما ميزاتها.",
     },
     {
-      text: "تجديد وِصال ❤️ (كابادوكيا)",
+      text: "باقة شهر العسل",
       message:
-        "السلام عليكم، مهتم بمعرفة تفاصيل باقة تجديد الوصال للأزواج في كابادوكيا وجناح الكهف.",
+        "السلام عليكم، مهتم بمعرفة تفاصيل باقة شهر العسل، ما تفاصيل هذه الباقة وما ميزاتها.",
     },
     {
-      text: "خصوصية مطلقة 🌌 (بودروم)",
+      text: "باقة فهد الخاصة",
       message:
-        "السلام عليكم، أود استشارة حول فيلا خاصة في بودروم وتصميم رحلة خصوصية تامة.",
+        "السلام عليكم، مهتم بمعرفة تفاصيل باقة فهد الخاصة، ما تفاصيل هذه الباقة وما ميزاتها.",
+    },
+    {
+      text: "أحتاج استشارة لاختيار الباقة المناسبة لي",
+      message:
+        "السلام عليكم، أريد استشارة بخصوص الباقات ونصيحة لاختيار الباقة المناسبة لي.",
     },
   ];
 
@@ -124,7 +124,7 @@ export const WhatsAppButton = ({
 
               {!typing && (
                 <div className="self-end bg-[#E2F7CB] text-stone-800 text-[11px] sm:text-xs rounded-xl sm:rounded-2xl rounded-tl-none p-2 sm:p-2.5 shadow-sm max-w-[85%] sm:max-w-[80%]">
-                  أود أن أستشير في رحلتنا القادمة لتركيا ✨
+                  أرغب في اختيار أحد الباقات وأحتاج استشارة ✨
                 </div>
               )}
             </div>
@@ -178,8 +178,7 @@ export const WhatsAppButton = ({
             1
           </span>
         )}
-
-        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+        <FaWhatsapp className="w-7 h-7 text-white" />
       </button>
     </div>
   );

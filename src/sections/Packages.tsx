@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
-import { MessageCircle, Heart, Shield, Sparkles, Check } from "lucide-react";
+import { Heart, Shield, Sparkles, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { landingPageContent } from "../data/content";
 import { Button } from "../components/Button";
 import { cn } from "../utils/cn";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface PackagesProps {
   onSelectPackage: (packageId: string) => void;
@@ -94,13 +94,13 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                   <div className="absolute inset-0 bg-linear-to-t from-[#141416] via-[#141416]/30 to-transparent" />
 
                   {/* Top Right Badge */}
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-[#141416]/90 backdrop-blur-md border border-white/10 py-1 px-2.5 sm:px-3 rounded-full flex items-center gap-1.5 text-[9px] sm:text-[10px] text-white font-sans max-w-[85%] sm:max-w-none truncate">
+                  <div className="absolute top-9 right-3 sm:top-12 sm:right-4 bg-[#141416]/90 backdrop-blur-md border border-white/10 py-1 px-2.5 sm:px-3 rounded-full flex items-center gap-1.5 text-[9px] sm:text-[10px] text-white font-sans max-w-[85%] sm:max-w-none truncate">
                     {visualBadgeIcon}
                     <span className="truncate">{visualBadge}</span>
                   </div>
 
                   {/* Duration Left Badge */}
-                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/70 px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] text-luxury-brand font-headline font-bold">
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-black/70 px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] text-luxury-brand font-headline font-bold">
                     {pkg.duration}
                   </div>
 
@@ -163,20 +163,9 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                       size="md"
                       onClick={() => handleWhatsAppInquiry(pkg.whatsappMessage)}
                       className="w-full text-xs font-bold py-2.5 sm:py-3 transition-transform active:scale-[0.99]"
-                      rightIcon={
-                        <MessageCircle className="w-4 h-4 ml-1.5 fill-white text-[#25D366]" />
-                      }
+                      rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
                     >
                       استشارة مخصصة عبر واتساب
-                    </Button>
-
-                    <Button
-                      variant="outline"
-                      size="md"
-                      onClick={() => onSelectPackage(pkg.id)}
-                      className="w-full text-xs border-white/10 text-stone-300 hover:bg-white hover:text-black transition-colors py-2.5 sm:py-3 font-medium"
-                    >
-                      احجز أو عدّل مسار هذه الباقة
                     </Button>
                   </div>
                 </div>

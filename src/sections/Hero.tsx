@@ -3,17 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
-import {
-  MessageCircle,
-  ArrowLeft,
-  Heart,
-  Sparkles,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowLeft, Heart, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { landingPageContent } from "../data/content";
 import { Button } from "../components/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface HeroProps {
   onExplorePackages: () => void;
@@ -25,14 +19,14 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
 
   const handleWhatsAppClick = () => {
     const encoded = encodeURIComponent(
-      hero.subheadline + " أود استشارة حول تنظيم رحلة فاخرة للأزواج.",
+      hero.subheadline + "أود استشارة حول تنظيم رحلة فاخرة للأزواج" + ".",
     );
     window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
   };
 
   return (
     <section
-      className="relative min-h-[90vh] sm:min-h-[92vh] flex items-center bg-linear-to-b from-[#1E1A17] via-stone-900 to-luxury-dark text-white pt-24 pb-12 sm:pb-16 overflow-hidden md:px-6 select-none"
+      className="relative min-h-screen sm:min-h-screen flex items-center bg-linear-to-b from-[#1E1A17] via-stone-900 to-luxury-dark text-white pt-24 pb-12 sm:pb-16 overflow-hidden md:px-6 select-none"
       dir="rtl"
       id="hero-travel-section"
     >
@@ -63,9 +57,9 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               id="hero-main-title"
             >
               {hero.headline.split(" ❤️")[0]}
-              <span className="text-rose-400 font-serif font-normal italic inline-block mr-1.5 animate-pulse">
+              {/* <span className="text-rose-400 font-serif font-normal italic inline-block mr-1.5 animate-pulse">
                 ❤️
-              </span>
+              </span> */}
             </h1>
 
             {/* Subheading explaining relationships over schedules */}
@@ -83,9 +77,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 size="lg"
                 shimmer
                 onClick={handleWhatsAppClick}
-                rightIcon={
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-1.5 fill-white text-[#25D366]" />
-                }
+                rightIcon={<FaWhatsapp className="w-6 h-6 text-white" />}
                 className="text-white text-xs sm:text-sm py-3.5 sm:py-4 px-6 sm:px-8 border border-[#24c15d] shadow-[0_8px_24px_rgba(37,211,102,0.2)] font-bold transition-all"
               >
                 {hero.ctaPrimaryText}
@@ -131,7 +123,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               <img
                 src={hero.heroImageUrl}
                 alt="الأزواج في رحلة كابادوكيا الحالمة"
-                className="w-full h-full object-cover transition-transform duration-[8s] hover:scale-103"
+                className="w-full h-full object-cover transition-all duration-1000 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
 
@@ -157,7 +149,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
       </div>
 
       {/* Decorative wave separator to blend seamlessly with Problem Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-linear-to-t from-luxury-sand to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-linear-to-t from-luxury-sand/50 to-transparent pointer-events-none"></div>
     </section>
   );
 };

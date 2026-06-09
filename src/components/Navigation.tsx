@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from "react";
-import { MessageCircle } from "lucide-react"; // استخدام أيقونة المحادثة الدائرية للواتساب
+import { useState, useEffect } from "react";
 import { Logo } from "./Logo";
 import { Button } from "./Button";
 import { cn } from "../utils/cn";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface NavigationProps {
   onExplorePackages: () => void;
@@ -31,7 +31,7 @@ export const Navigation = ({
 
   const handleWhatsAppDirect = () => {
     const encoded = encodeURIComponent(
-      "مرحباً تآلُف، أريد استشارتكم لتصميم رحلة استثنائية للأزواج بتركيا.",
+      "مرحباً تآلُف، أريد استشارتكم لتصميم رحلة استثنائية للأزواج.",
     );
     window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
   };
@@ -67,23 +67,21 @@ export const Navigation = ({
           </Button>
 
           {/* زر صمم برنامجي المخصص - يظهر فقط في الشاشات المتوسطة والكبيرة */}
-          <Button
+          {/* <Button
             variant="secondary"
             size="sm"
             onClick={onOpenInquiry}
             className="text-amber-950 text-[11px] sm:text-xs py-1.5 sm:py-2 font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all hidden md:inline-flex"
           >
             صمم برنامجي المخصص
-          </Button>
+          </Button> */}
 
           {/* زر استشارة واتساب - البطل الرئيسي المتاح دائماً لكل الشاشات والموبايل */}
           <Button
             variant="whatsapp"
             size="sm"
             onClick={handleWhatsAppDirect}
-            rightIcon={
-              <MessageCircle className="w-4 h-4 ml-1 fill-white text-[#25D366]" />
-            }
+            rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
             className="text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 shadow-[0_4px_10px_rgba(37,211,102,0.15)] hover:scale-[1.02] active:scale-95 transition-all"
           >
             استشارة واتساب

@@ -32,7 +32,7 @@ export const Problem = () => {
     >
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        {/* <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-rose-400 font-headline font-bold text-xs uppercase tracking-wider bg-rose-950/45 border border-rose-800/40 rounded-full px-4 py-1.5 inline-block mb-4">
             تحديات رحلات الأزواج المعتادة
           </span>
@@ -42,53 +42,7 @@ export const Problem = () => {
           <p className="text-sm text-stone-400 font-sans max-w-2xl mx-auto leading-relaxed">
             {problem.introText}
           </p>
-        </div>
-
-        {/* Rain of Pain Points Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {problem.painPoints.map((item, idx) => {
-            const designIcon = icons[idx] || (
-              <Compass className="w-6 h-6 text-rose-400" />
-            );
-            const splitted = item.title.split(item.highlightedWord);
-
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-[#141416] border border-white/5 p-6 rounded-2xl hover:border-luxury-brand/30 transition-all duration-300 relative flex flex-col justify-between group shadow-xl"
-              >
-                <div>
-                  {/* Icon Frame */}
-                  <div className="w-12 h-12 rounded-xl bg-rose-950/20 flex items-center justify-center mb-5 border border-rose-800/30 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                    {designIcon}
-                  </div>
-
-                  {/* Styled Header with Highlighted word */}
-                  <h3 className="font-headline font-bold text-base text-[#F5F2ED] mb-3 leading-snug">
-                    {splitted[0]}
-                    <span className="text-rose-400 underline decoration-rose-600/60 decoration-2 underline-offset-4 mx-1">
-                      {item.highlightedWord}
-                    </span>
-                    {splitted[1]}
-                  </h3>
-
-                  {/* Body Text */}
-                  <p className="text-xs text-stone-400 leading-relaxed font-sans">
-                    {item.description}
-                  </p>
-                </div>
-
-                <span className="text-[10px] text-stone-500 font-sans block mt-4 self-end bg-white/5 px-2 py-0.5 rounded-md">
-                  {idx + 1}
-                </span>
-              </motion.div>
-            );
-          })}
-        </div>
+        </div> */}
 
         {/* Glowing Majestic Solution Banner */}
         <motion.div

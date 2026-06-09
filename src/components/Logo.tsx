@@ -16,16 +16,20 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
   // المحتوى الداخلي للشعار المصقول للأجهزة الذكية والمكتبية
   const logoContent = (
     <>
-      {/* الدائرة المكتوب فيها الحرف مع حماية ثابتة ضد الانضغاط */}
+      {/* الدائرة الحاضنة للصورة مع حماية صلبة ضد تمدد أو انضغاط الصورة */}
       <div
         className={cn(
-          "w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-headline font-bold text-base sm:text-lg transition-transform duration-500 md:group-hover:rotate-12 shrink-0 select-none",
+          "w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center overflow-hidden transition-transform duration-500 md:group-hover:rotate-6 shrink-0 select-none",
           light
             ? "bg-luxury-brand text-luxury-dark shadow-[0_4px_12px_rgba(197,168,128,0.2)]"
             : "bg-luxury-dark text-luxury-brand shadow-[0_4px_12px_rgba(25,22,20,0.15)]",
         )}
       >
-        ت
+        <img
+          src="/logo.png"
+          alt="تآلف - Luxury Couples Travel Logo"
+          className="w-full h-full object-cover rounded-full pointer-events-none"
+        />
       </div>
 
       {/* النصوص والتاغلاين الموائم للمساحات الضيقة */}

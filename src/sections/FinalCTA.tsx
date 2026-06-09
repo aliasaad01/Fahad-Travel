@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
-import { MessageCircle, Heart, Sparkles, ShieldCheck } from "lucide-react";
+import { Heart, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { landingPageContent } from "../data/content";
 import { InquiryForm } from "../components/InquiryForm";
 import { Button } from "../components/Button";
+import { FaWhatsapp } from "react-icons/fa";
 
 type PackageIdType =
   | "pkg-memory"
@@ -108,9 +108,7 @@ export const FinalCTA = ({
                 variant="whatsapp"
                 size="lg"
                 onClick={handleWhatsAppDirect}
-                rightIcon={
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-1.5 fill-white text-[#25D366]" />
-                }
+                rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
                 className="text-white text-xs py-3 sm:py-3.5 font-bold shadow-[0_4px_15px_rgba(37,211,102,0.1)] active:scale-95 transition-all"
               >
                 {finalCta.whatsappCtaText}

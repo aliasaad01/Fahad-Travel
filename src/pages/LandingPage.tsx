@@ -107,12 +107,12 @@ export const LandingPage = () => {
       <FAQ />
 
       {/* Closing Interactive customized lead Customizer form */}
-      <FinalCTA
+      {/* <FinalCTA
         selectedPackageId={selectedPackageId}
         onSuccessSubmit={(data) => {
           console.log("Elite travel lead customized:", data);
         }}
-      />
+      /> */}
 
       {/* Minimal professional footer */}
       <Footer />
