@@ -63,12 +63,12 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             </h1>
 
             {/* Subheading explaining relationships over schedules */}
-            <p
+            {/* <p
               className="text-stone-300 text-xs sm:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-8 font-sans px-2 sm:px-0"
               id="hero-subtitle"
             >
               {hero.subheadline}
-            </p>
+            </p> */}
 
             {/* High-converting responsive actions */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-md sm:max-w-none mx-auto sm:mx-0 w-full">
