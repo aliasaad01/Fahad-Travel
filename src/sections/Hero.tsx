@@ -56,11 +56,15 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               className="font-headline font-extrabold text-2xl sm:text-4xl lg:text-6xl text-white leading-tight sm:leading-[1.15] mb-4 sm:mb-6 tracking-tight drop-shadow-sm"
               id="hero-main-title"
             >
-              {hero.headline.split(" ❤️")[0]}
+              {hero.headline}
               {/* <span className="text-rose-400 font-serif font-normal italic inline-block mr-1.5 animate-pulse">
                 ❤️
               </span> */}
             </h1>
+            <p className="text-stone-300 text-xs sm:text-sm max-w-2xl leading-relaxed mb-6 font-sans">
+              نبتكر لأجلكما تفاصيل تفوق التوقعات، لتبدأ قصة جديدة من السعادة
+              المشتركة.
+            </p>
 
             {/* Subheading explaining relationships over schedules */}
             {/* <p
@@ -128,7 +132,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               />
 
               {/* Subtle visual text card floating on the image */}
-              <div className="absolute bottom-4 right-4 left-4 sm:bottom-6 sm:right-6 sm:left-6 bg-luxury-dark/80 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10 text-right">
+              <div className="absolute bottom-2 right-4 left-4 sm:bottom-4 sm:right-6 sm:left-6 bg-luxury-dark/80 backdrop-blur-md p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10 text-right">
                 <p className="text-luxury-brand text-[9px] sm:text-[10px] font-sans font-bold uppercase tracking-wider mb-0.5">
                   لحظة حية للأزواج
                 </p>

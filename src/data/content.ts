@@ -9,14 +9,14 @@ export const landingPageContent: LandingPageContent = {
   brandName: "تآلُف",
   hero: {
     badge: "نخبة السياحة الراقية للأزواج في تركيا",
-    headline: "مو عشان تسافرون... عشان ترجعون أقرب ❤️",
+    headline: "لأن حبكما استثنائي.. يستحق رحلة تفوق الخيال",
     subheadline: "السلام عليكم، كيف الحال. ",
     trustBullet1: "★ تنظيم خاص بالكامل بروح الخصوصية المطلقة",
     trustBullet2: "★ رعاية مستمرة 24/7 لمرافقتكم من المطار والعودة للديار",
     ctaPrimaryText: "تواصل عبر الواتساب للاستشارة",
     ctaSecondaryText: "اكتشف الباقات الملهمة",
     heroImageUrl:
-      "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1200",
+      "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1200",
   },
 
   problem: {
