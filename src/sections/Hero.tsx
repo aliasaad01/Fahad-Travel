@@ -36,7 +36,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
       <div className="absolute -bottom-48 -left-48 w-72 h-72 sm:w-96 sm:h-96 bg-luxury-brand/10 rounded-full filter blur-[100px] sm:blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 sm:gap-12 items-center">
           {/* الكتلة النصية اليمنى - تحتوي على العنوان والتفاصيل التمهيدية */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
