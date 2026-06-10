@@ -64,7 +64,7 @@ export const Footer = () => {
               className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
               onClick={() => handleScrollToSection("faq-accordion-section")}
             >
-              شروح شائعة
+              أسئلة شائعة
             </button>
           </div>
 

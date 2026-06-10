@@ -54,8 +54,7 @@ export const landingPageContent: LandingPageContent = {
         highlightedWord: "الخاطئ",
       },
     ],
-    solutionSummary:
-      "نحن في تآلُف نختصر عليك المشوار بالكامل... لتبدأ رحلتكما بلحظة هدوء منذ التفكير الأول.",
+    solutionSummary: "استمتع برحلتك… واترك التخطيط علينا.",
   },
 
   storytelling: {
@@ -78,15 +77,15 @@ export const landingPageContent: LandingPageContent = {
   stats: [
     {
       id: "stat1",
-      value: "+150",
-      label: "أزواج استعدنا وصالهم",
+      value: "+510",
+      label: "أزواج تم ترتيب رحلاتهم",
       description: "عائلات عادت بروح جديدة وأكثر قربًا بعد تجارب استثنائية.",
     },
     {
       id: "stat2",
-      value: "+120",
-      label: "ليلة زوجية حالمة مُخططة",
-      description: "موزعة في أرقى وأكثر الأماكن رومانسية وهدوءاً في تركيا.",
+      value: "+200",
+      label: "تقييم إيجابي",
+      description: "قصص حب بدأت بآلاف الأميال وتوّجت بذكريات لا تنسى.",
     },
     {
       id: "stat3",
@@ -97,7 +96,7 @@ export const landingPageContent: LandingPageContent = {
     },
     {
       id: "stat4",
-      value: "+8",
+      value: "+10",
       label: "سنوات من تصميم التجارب الفريدة",
       description:
         "خبرة طويلة مستمرة في الإدارة وتصميم الفعاليات والمفاجآت للأزواج.",
@@ -162,10 +161,10 @@ export const landingPageContent: LandingPageContent = {
       vibe: "رفاهية مطلقة - خصوصية فائقة وأعلى درجات التفرد",
       duration: "برنامج سياحي مرن بالكامل ومصمم حسب رغبتك",
       imageUrl:
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200",
+        "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200",
       features: [
         {
-          text: "إقامة راقية في أفخم الفنادق العالمية (JW Marriott, Four Seasons, Shangri-La)",
+          text: "إقامة راقية في أفخم الفنادق العالمية",
           isPremiumHighlight: true,
         },
         { text: "استقبال وتوديع فاخر ببروتوكولات نُخبوية تليق بمقامكم" },

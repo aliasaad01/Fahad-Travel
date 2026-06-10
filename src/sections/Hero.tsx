@@ -133,17 +133,18 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                   لحظة حية للأزواج
                 </p>
                 <p className="text-white font-headline text-[11px] sm:text-xs font-semibold leading-relaxed">
-                  بمجرد هبوط المنطاد الدافئ، كان بانتظارنا فطور تركي وورود منسقة
-                  بشكل مذهل لم نكن نتخيله.
+                  استيقظ برفقة شريك حياتك على إطلالة ساحرة وصباح هادئ، واستمتعا
+                  بفطور تركي فاخر وسط أجواء من الراحة والرومانسية. لحظات جميلة
+                  تبدأ مع أول ساعات النهار وتتحول إلى ذكريات لا تُنسى.
                 </p>
               </div>
             </div>
 
             {/* Tiny stylized sticker */}
-            <div className="absolute -top-3 -right-2 bg-luxury-brand text-luxury-dark text-[9px] sm:text-[10px] font-headline font-bold px-2.5 py-1.5 rounded-lg sm:rounded-xl shadow-lg border border-luxury-accent/20 rotate-12 flex items-center gap-1 select-none">
+            {/* <div className="absolute -top-3 -right-2 bg-luxury-brand text-luxury-dark text-[9px] sm:text-[10px] font-headline font-bold px-2.5 py-1.5 rounded-lg sm:rounded-xl shadow-lg border border-luxury-accent/20 rotate-12 flex items-center gap-1 select-none">
               <span>★</span>
               <span>مساحة خالية للحب والوئام</span>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

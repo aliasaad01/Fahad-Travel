@@ -162,7 +162,7 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                       variant="whatsapp"
                       size="md"
                       onClick={() => handleWhatsAppInquiry(pkg.whatsappMessage)}
-                      className="w-full text-xs font-bold py-2.5 sm:py-3 transition-transform active:scale-[0.99]"
+                      className="w-full text-xs font-bold py-2.5 sm:py-3 transition-all duration-300 active:scale-[0.99]"
                       rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
                     >
                       استشارة مخصصة عبر واتساب

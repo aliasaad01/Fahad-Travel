@@ -31,19 +31,6 @@ export const Problem = () => {
       id="problem-empathy-section"
     >
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        {/* <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-rose-400 font-headline font-bold text-xs uppercase tracking-wider bg-rose-950/45 border border-rose-800/40 rounded-full px-4 py-1.5 inline-block mb-4">
-            تحديات رحلات الأزواج المعتادة
-          </span>
-          <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-[#F5F2ED] leading-tight mb-4">
-            {problem.title}
-          </h2>
-          <p className="text-sm text-stone-400 font-sans max-w-2xl mx-auto leading-relaxed">
-            {problem.introText}
-          </p>
-        </div> */}
-
         {/* Glowing Majestic Solution Banner */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
@@ -61,14 +48,20 @@ export const Problem = () => {
               <CheckCircle2 className="w-6 h-6 animate-pulse" />
             </div>
 
-            <h3 className="font-headline font-bold text-xl sm:text-2xl text-white mb-3">
+            <h3 className="font-headline font-bold text-xl sm:text-2xl text-white mb-3 relative">
               {problem.solutionSummary}
+              <span className="w-48 h-px bg-gray-500 absolute left-1/2 transform -translate-x-1/2 -bottom-2"></span>
             </h3>
 
+            <h2 className="font-headline font-bold text-base sm:text-lg text-white mb-3">
+              هل تعبت من التنقل بين عشرات المواقع ومقاطع الفيديو بحثاً عن أفضل
+              الفنادق والأنشطة والمواصلات؟
+            </h2>
+
             <p className="text-stone-300 text-xs sm:text-sm max-w-2xl leading-relaxed mb-6 font-sans">
-              سفينة واحدة، قبطان واحد خبير، ومسار سائل ينساب كالماء. نتحمل عنكم
-              مرارة التنسيق والاتصالات والمناقشات لتدخلوا الباب معاً ممسكي
-              الأيادي في سكينة لا تُشترى.
+              مع خدمة مستشار السفر، نقوم بتصميم رحلة تناسب ميزانيتك واهتماماتك
+              وأسلوب سفرك، ونقدم لك خطة متكاملة جاهزة للتنفيذ، لتستمتع بالرحلة
+              دون عناء التخطيط
             </p>
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-center text-[11px] text-luxury-brand font-headline font-medium">
