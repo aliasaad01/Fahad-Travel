@@ -25,7 +25,7 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
         )}
       >
         <img
-          src="/logo-fahad.png"
+          src="/favicon.png"
           alt="رحلات فهد - Luxury Couples Travel Logo"
           className="w-full h-full object-cover rounded-full pointer-events-none"
         />
