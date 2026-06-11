@@ -52,7 +52,7 @@ export const Testimonials = () => {
         {/* حاوية السلايدر لآراء الأزواج */}
         <div className="max-w-4xl mx-auto" id="testimonials-slider-box">
           <div
-            className="relative bg-white border border-stone-200/50 rounded-2xl sm:rounded-3xl p-5 sm:p-10 shadow-sm min-h-88 sm:min-h-80 flex flex-col justify-between overflow-hidden"
+            className="relative bg-white border border-stone-200/50 rounded-2xl sm:rounded-3xl p-5 sm:p-10 shadow-sm min-h-40 flex flex-col justify-between overflow-hidden"
             id="slider-body"
           >
             {/* أيقونة اقتباس تزيينية متناسقة في الخلفية */}
