@@ -22,7 +22,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
     const encoded = encodeURIComponent(
       "رحلات فهد للأزواج. أود الحصول على استشارة حول تنظيم وتصميم رحلة فاخرة لنا.",
     );
-    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/966567000039?text=${encoded}`, "_blank");
   };
 
   return (

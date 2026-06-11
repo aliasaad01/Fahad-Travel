@@ -90,7 +90,7 @@ const SuccessPanel = ({
   const handleWhatsAppRedirect = () => {
     const msg = `مرحباً رحلات فهد للأزواج، قمت بإرسال طلبي للرحلة الخاصة بالاسم: ${data.fullName}. أرغب بمناقشة باقة: (${PACKAGES_INFO[data.preferredPackage]}) الآن وتنسيق البرنامج المخصص.`;
     window.open(
-      `https://wa.me/937237163?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/966567000039?text=${encodeURIComponent(msg)}`,
       "_blank",
       "noopener,noreferrer",
     );

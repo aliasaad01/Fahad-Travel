@@ -29,7 +29,7 @@ export const FinalCTA = ({
     const baseMsg =
       "مرحباً رحلات فهد، أود التخلص من حيرة البحث وتصميم رحلة زوجية فاخرة ومخصصة لنا.";
     const encoded = encodeURIComponent(baseMsg);
-    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/966567000039?text=${encoded}`, "_blank");
   };
 
   return (

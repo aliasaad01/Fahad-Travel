@@ -33,7 +33,7 @@ export const Navigation = ({
     const encoded = encodeURIComponent(
       "مرحباً رحلات فهد للأزواج، أريد استشارتكم لتصميم رحلة استثنائية راقية تضمن لنا الخصوصية والرفاهية المطلقة.",
     );
-    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/966567000039?text=${encoded}`, "_blank");
   };
 
   return (
