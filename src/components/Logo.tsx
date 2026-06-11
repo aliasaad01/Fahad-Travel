@@ -43,7 +43,7 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
         </span>
         <span
           className={cn(
-            "text-[7.5px] sm:text-[9px] tracking-widest sm:tracking-[0.15em] font-sans font-semibold uppercase leading-none block whitespace-nowrap",
+            "text-[7.5px] sm:text-[9px] tracking-widest sm:tracking-[0.15em] font-sans font-semibold uppercase leading-none block whitespace-nowrap mt-1",
             light ? "text-luxury-accent/80" : "text-luxury-brand",
           )}
         >
