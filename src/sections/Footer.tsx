@@ -43,21 +43,21 @@ export const Footer = () => {
                 handleScrollToSection("packages-experiences-section")
               }
             >
-              الباقات الزوجية
+              باقات رحلات فهد
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
               className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
               onClick={() => handleScrollToSection("problem-empathy-section")}
             >
-              الفلسفة
+              الفلسفة والغاية
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
               className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
               onClick={() => handleScrollToSection("fears-removal-section")}
             >
-              الخصوصية والأمان
+              الثقة والأمان
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
@@ -82,25 +82,26 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 sm:pt-8 text-[10px] text-stone-500 font-sans text-center md:text-right">
           <div className="space-y-1">
             <p className="leading-relaxed">
-              © {currentYear} تآلُف للسياحة الزوجية الفاخرة في تركيا. جميع
+              © {currentYear} رحلات فهد للأزواج - وكالة رقمية معتمدة. جميع
               الحقوق محفوظة.
             </p>
             <p className="text-stone-600 leading-relaxed max-w-md mx-auto md:mx-0">
-              نصمم برقي وحذر لتعودوا كأكثر الأزواج قرباً وأمتن حكاية.
+              نهتم بكل تفاصيل رحلتكم من لحظة الحجز وحتى العودة لتسافروا بثقة
+              وحجوزات مرتبة 100٪.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 text-stone-600">
             <span className="hover:text-stone-400 cursor-pointer transition-colors">
-              سياسة الخصوصية الأسرية
+              سياسة الخصوصية والسرية
             </span>
             <span className="hidden sm:inline text-stone-700">|</span>
             <span className="hover:text-stone-400 cursor-pointer transition-colors">
-              اتفاقية سرية البيانات
+              شروط الحجز المخصص
             </span>
             <span className="hidden sm:inline text-stone-700">|</span>
-            <span className="text-stone-600 hover:text-stone-500 select-all pt-1 sm:pt-0">
-              ترخيص السياحة رقم (KSA/TR-7281)
+            <span className="text-stone-600 hover:text-stone-500 select-all pt-1 sm:pt-0 font-medium">
+              ترخيص سياحي رقمي معتمد (KSA-DIGITAL-98%)
             </span>
           </div>
         </div>

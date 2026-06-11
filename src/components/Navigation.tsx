@@ -22,7 +22,7 @@ export const Navigation = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20); // الحساسية للموبايل تبدأ من 20 بكسل للتفاعل الأسرع
+      setScrolled(window.scrollY > 20); // الحساسية للموبايل تبدأ من 20 بكسل للتفاعل الأسرع في موقع رحلات فهد
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -31,9 +31,9 @@ export const Navigation = ({
 
   const handleWhatsAppDirect = () => {
     const encoded = encodeURIComponent(
-      "مرحباً تآلُف، أريد استشارتكم لتصميم رحلة استثنائية للأزواج.",
+      "مرحباً رحلات فهد للأزواج، أريد استشارتكم لتصميم رحلة استثنائية راقية تضمن لنا الخصوصية والرفاهية المطلقة.",
     );
-    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
   };
 
   return (
@@ -46,7 +46,7 @@ export const Navigation = ({
       dir="rtl"
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Branding Logo - مرن ومتجاوب */}
+        {/* Branding Logo - مرن ومتجاوب يعكس هوية رحلات فهد */}
         <div className="shrink-0 scale-90 sm:scale-100 origin-right">
           <Logo light href="#" />
         </div>
@@ -63,7 +63,7 @@ export const Navigation = ({
               scrolled && "text-stone-300",
             )}
           >
-            اكتشف الباقات
+            اكتشف الباقات الملهمة
           </Button>
 
           {/* زر صمم برنامجي المخصص - يظهر فقط في الشاشات المتوسطة والكبيرة */}
@@ -76,7 +76,7 @@ export const Navigation = ({
             صمم برنامجي المخصص
           </Button> */}
 
-          {/* زر استشارة واتساب - البطل الرئيسي المتاح دائماً لكل الشاشات والموبايل */}
+          {/* زر استشارة واتساب - البطل الرئيسي المتاح دائماً لكل الشاشات والموبايل لرحلات فهد */}
           <Button
             variant="whatsapp"
             size="sm"
@@ -84,7 +84,7 @@ export const Navigation = ({
             rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
             className="text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 shadow-[0_4px_10px_rgba(37,211,102,0.15)] hover:scale-[1.02] active:scale-95 transition-all"
           >
-            استشارة واتساب
+            استشارة واتساب فورية
           </Button>
         </div>
       </div>

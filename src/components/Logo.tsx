@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
 import { cn } from "../utils/cn";
 
 interface LogoProps {
@@ -13,7 +12,7 @@ interface LogoProps {
 }
 
 export const Logo = ({ className = "", light = false, href }: LogoProps) => {
-  // المحتوى الداخلي للشعار المصقول للأجهزة الذكية والمكتبية
+  // المحتوى الداخلي للشعار المصقول للأجهزة الذكية والمكتبية لرحلات فهد
   const logoContent = (
     <>
       {/* الدائرة الحاضنة للصورة مع حماية صلبة ضد تمدد أو انضغاط الصورة */}
@@ -26,8 +25,8 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
         )}
       >
         <img
-          src="/logo.png"
-          alt="تآلف - Luxury Couples Travel Logo"
+          src="/logo-fahad.png"
+          alt="رحلات فهد - Luxury Couples Travel Logo"
           className="w-full h-full object-cover rounded-full pointer-events-none"
         />
       </div>
@@ -40,7 +39,7 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
             light ? "text-luxury-cream" : "text-luxury-dark",
           )}
         >
-          تآلُف
+          رحلات فهد
         </span>
         <span
           className={cn(
@@ -48,7 +47,7 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
             light ? "text-luxury-accent/80" : "text-luxury-brand",
           )}
         >
-          Luxury Couples Travel
+          رحلات فاخرة للأزواج
         </span>
       </div>
     </>

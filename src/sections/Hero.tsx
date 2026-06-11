@@ -20,9 +20,9 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
 
   const handleWhatsAppClick = () => {
     const encoded = encodeURIComponent(
-      "نخبة السياحة الراقية للأزواج. أود استشارة حول تنظيم رحلة فاخرة للأزواج.",
+      "رحلات فهد للأزواج. أود الحصول على استشارة حول تنظيم وتصميم رحلة فاخرة لنا.",
     );
-    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
   };
 
   return (
@@ -31,20 +31,20 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
       dir="rtl"
       id="hero-travel-section"
     >
-      {/* Absolute decorative backgrounds */}
+      {/* الخلفيات الزخرفية والجمالية المحيطة */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,168,128,0.14),transparent_60%)] pointer-events-none" />
       <div className="absolute -bottom-48 -left-48 w-72 h-72 sm:w-96 sm:h-96 bg-luxury-brand/10 rounded-full filter blur-[100px] sm:blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 sm:gap-12 items-center">
-          {/* الكتلة النصية اليمنى - تحتوي على العنوان والتفاصيل التمهيدية */}
+          {/* الكتلة النصية اليمنى - تحتوي على العنوان والتفاصيل التمهيدية لرحلات فهد */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col text-center sm:text-right justify-center order-1"
           >
-            {/* مؤشر النخبة والموثوقية */}
+            {/* مؤشر النخبة والموثوقية العلوية */}
             <div className="inline-flex items-center gap-1.5 bg-luxury-brand/10 border border-luxury-brand/30 rounded-full px-3.5 py-1 self-center sm:self-start mb-5 text-luxury-brand shadow-sm">
               <Sparkles className="w-3.5 h-3.5" />
               <span className="text-[10px] sm:text-xs font-headline font-semibold tracking-wide">
@@ -52,20 +52,20 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               </span>
             </div>
 
-            {/* العنوان الرئيسي الجذاب والمخصص بناءً على طلبك */}
+            {/* العنوان الرئيسي الفاخر لرحلات فهد */}
             <h1
               className="font-headline font-extrabold text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight sm:leading-[1.15] mb-4 sm:mb-6 tracking-tight drop-shadow-sm"
               id="hero-main-title"
             >
-              لأن حبكما استثنائي.. يستحق رحلة تفوق الخيال
+              باقات رحلات فهد مخصصة للأزواج
             </h1>
 
+            {/* النص الفرعي التمهيدي لرحلة النخبة */}
             <p className="text-stone-300 text-xs sm:text-sm max-w-2xl leading-relaxed mb-6 sm:mb-8 font-sans">
-              نبتكر لأجلكما تفاصيل تفوق التوقعات، لتبدأ قصة جديدة من السعادة
-              المشتركة والانسجام المطلق في أرقى بقاع العالم.
+              بتحس بالفرق من اول ماتوصل للمطار...
             </p>
 
-            {/* الأزرار التفاعلية (CTA) وضعت أسفل النصوص والكتل المظهرية للتحويل المباشر */}
+            {/* الأزرار التفاعلية (CTA) لنسخة الديسكتوب وتحويل العميل الفوري */}
             <div className="flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-md sm:max-w-none mx-auto sm:mx-0 w-full hidden lg:flex">
               <Button
                 variant="whatsapp"
@@ -90,7 +90,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               </Button>
             </div>
 
-            {/* عوامل الثقة والأمان - للديسكتوب */}
+            {/* عوامل الثقة والأمان - لنسخة الديسكتوب */}
             <div className="grid-cols-1 sm:grid-cols-2 gap-3 border-t border-white/5 pt-5 text-stone-400 text-[11px] sm:text-xs font-medium text-right max-w-md sm:max-w-none mx-auto sm:mx-0 w-full hidden lg:grid">
               <div className="flex items-center gap-2 justify-center sm:justify-start md:hover:text-luxury-brand transition-colors">
                 <ShieldCheck className="w-4 h-4 text-luxury-brand shrink-0" />
@@ -103,21 +103,21 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             </div>
           </motion.div>
 
-          {/* الكتلة البصرية اليسرى - تحتوي على الصورة الحالمة مع معالجة الترتيب الرأسي للهواتف */}
+          {/* الكتلة البصرية اليسرى - تحتوي على الصورة الحالمة مع ترتيب متجاوب مع الهواتف */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative flex flex-col justify-center items-center order-2 mt-2 lg:mt-0"
           >
-            {/* توهج الخلفية المحيط بالصورة */}
+            {/* توهج الخلفية المحيط بالصورة الفاخرة */}
             <div className="absolute inset-0 bg-linear-to-tr from-luxury-brand/10 filter blur-2xl rounded-3xl opacity-50 pointer-events-none" />
 
-            {/* حاوية الصورة الفاخرة */}
+            {/* حاوية الصورة الملكية المصقولة */}
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-4/5 w-full max-w-72.5 sm:max-w-md shadow-2xl border-2 sm:border-4 border-luxury-dark/60 shadow-black/80 mb-6 lg:mb-0">
               <img
                 src={hero.heroImageUrl}
-                alt="الأزواج في رحلة حالمة فريدة"
+                alt="الأزواج في رحلة حالمة فريدة مع رحلات فهد"
                 className="w-full h-full object-cover transition-all duration-1000 md:hover:scale-105"
                 referrerPolicy="no-referrer"
               />
@@ -130,12 +130,12 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 <p className="text-white font-headline text-[11px] sm:text-xs font-semibold leading-relaxed">
                   استيقظ برفقة شريك حياتك على إطلالة ساحرة وصباح هادئ، وسط أجواء
                   من الراحة والرومانسية المطلقة التي تليق بكما وتتحول فوراً إلى
-                  ذكريات لا تُنسى.
+                  ذكريات لا تُنسى مع رحلات فهد.
                 </p>
               </div>
             </div>
 
-            {/* إظهار كتل الأزرار والـ CTA تحت الصورة مباشرة في شاشات الجوال لاتباع الترتيب المقترح بدقة */}
+            {/* إظهار كتل الأزرار والـ CTA تحت الصورة مباشرة في شاشات الجوال لترتيب مثالي */}
             <div className="flex flex-col gap-3 w-full max-w-72.5 sm:max-w-md lg:hidden">
               <Button
                 variant="whatsapp"
@@ -159,7 +159,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 {hero.ctaSecondaryText}
               </Button>
 
-              {/* وثائق الثقة تحت أزرار الجوال */}
+              {/* وثائق وعوامل الثقة تحت أزرار الجوال */}
               <div className="grid grid-cols-2 gap-2 pt-4 text-stone-400 text-[10px] font-medium text-right w-full border-t border-white/5 mt-2">
                 <div className="flex items-center gap-1.5 justify-start">
                   <ShieldCheck className="w-3.5 h-3.5 text-luxury-brand shrink-0" />
@@ -175,7 +175,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
         </div>
       </div>
 
-      {/* Decorative wave separator to blend seamlessly with Problem Section */}
+      {/* فاصل انسيابي ناعم للانتقال إلى القسم التالي بسلاسة */}
       <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-linear-to-t from-luxury-sand/50 to-transparent pointer-events-none" />
     </section>
   );

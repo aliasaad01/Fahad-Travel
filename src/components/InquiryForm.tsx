@@ -20,26 +20,27 @@ import { Button } from "./Button";
 import { cn } from "../utils/cn";
 
 // ==========================================
-// 1. البيانات الثابتة والـ Schema
+// 1. البيانات الثابتة والـ Schema لرحلات فهد
 // ==========================================
 
 const PACKAGES_INFO = {
-  "pkg-memory": "باقة تجديد الوصال (كابادوكيا الحالمة)",
-  "pkg-honeymoon": "باقة الميثاق الأبدي (شهر العسل الملكي)",
-  "pkg-luxury": "باقة النخبة المطلقة (الفيلا واليخت الخاص)",
-  "pkg-custom": "أرغب بتصميم باقة خاصة مبنية على رغباتنا",
+  "pkg-memory": "باقة ذِكرى المتوازنة والمريحة",
+  "pkg-honeymoon": "باقة شهر العسل (خصوصية تامة وإحساس البدايات)",
+  "pkg-luxury": "باقة فهد الخاصة (رفاهية مطلقة ونخبوية)",
+  "pkg-custom": "أرغب بتصميم باقة مخصصة بالكامل حسب رغبتنا",
 } as const;
 
 const SURPRISE_OPTIONS = [
   {
     value: "roses",
-    label: "تزيين الجناح الخاص بالحقائب والورود والشموع الطبيعية عند الوصول",
+    label:
+      "تزيين الجناح الخاص بالورود والشموع والترتيبات الرومانسية عند الوصول",
   },
   { value: "yacht", label: "حجز يخت خاص مع عشاء فاخر وعازف كمان عند الغروب" },
   { value: "spa", label: "جلسة مساج وعلاج صحي VIP متكاملة للزوجين معاً" },
   {
     value: "photography",
-    label: "جلسة تصوير احترافية خاصة لتخليد لحظات التقارب والود",
+    label: "جلسة تصوير احترافية خاصة لتخليد لحظات التقارب والود للذكرى",
   },
 ] as const;
 
@@ -87,9 +88,9 @@ const SuccessPanel = ({
   selectedRequests: string[];
 }) => {
   const handleWhatsAppRedirect = () => {
-    const msg = `مرحباً تآلُف، قمت بإرسال طلبي للرحلة الخاصة بالاسم: ${data.fullName}. أرغب بمناقشة باقة: (${PACKAGES_INFO[data.preferredPackage]}) الآن.`;
+    const msg = `مرحباً رحلات فهد للأزواج، قمت بإرسال طلبي للرحلة الخاصة بالاسم: ${data.fullName}. أرغب بمناقشة باقة: (${PACKAGES_INFO[data.preferredPackage]}) الآن وتنسيق البرنامج المخصص.`;
     window.open(
-      `https://wa.me/963937237163?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/937237163?text=${encodeURIComponent(msg)}`,
       "_blank",
       "noopener,noreferrer",
     );
@@ -113,14 +114,14 @@ const SuccessPanel = ({
         <span className="font-headline font-bold text-luxury-brand">
           {PACKAGES_INFO[data.preferredPackage]}
         </span>
-        . أنتما على بعد خطوة واحدة لميلاد فصل رومانسي مذهل بتركيا. يقوم الآن
-        مستشار تجارب الأزواج بمراجعة طلبكم وسنتواصل معكم مباشرة في أقل من
-        ساعتين.
+        . أنتما على بعد خطوة واحدة لميلاد فصل رومانسي مذهل مليء بالانسجام
+        والرفاهية. يقوم الآن مستشار تجارب الأزواج بمراجعة طلبكم وسنتواصل معكم
+        مباشرة في أقل من ساعتين.
       </p>
 
       <div className="bg-stone-50 border border-stone-100 rounded-xl sm:rounded-2xl p-3.5 sm:p-4 text-right mb-5 sm:mb-6">
         <h4 className="text-[10px] sm:text-xs font-bold text-stone-400 font-sans mb-2">
-          ملخص تطلعات رحلتكم:
+          ملخص تطلعات رحلتكم مع رحلات فهد:
         </h4>
         <ul className="space-y-1.5 text-[11px] sm:text-xs text-stone-700">
           <li className="truncate">
@@ -137,7 +138,7 @@ const SuccessPanel = ({
           )}
           {selectedRequests.length > 0 && (
             <li className="truncate">
-              <strong>الترتيبات:</strong>{" "}
+              <strong>الترتيبات الخاصة:</strong>{" "}
               {selectedRequests
                 .map(
                   (r) =>
@@ -157,7 +158,7 @@ const SuccessPanel = ({
           className="w-full text-xs sm:text-sm py-3"
           onClick={handleWhatsAppRedirect}
         >
-          نقل النقاش للواتساب فوراً تسريعاً للتصميم
+          نقل النقاش للواتساب فوراً تسريعاً للتصميم والحجز
         </Button>
         <span className="text-[9px] sm:text-[10px] text-stone-400 font-sans">
           أو انتظر اتصال مستشار النخبة بنا على الرقم: {data.whatsappNumber}
@@ -168,7 +169,7 @@ const SuccessPanel = ({
 };
 
 // ==========================================
-// 3. المكون الأساسي (الفورم)
+// 3. المكون الأساسي (الفورم) لرحلات فهد
 // ==========================================
 export const InquiryForm = ({
   initialPackageId = "pkg-memory",
@@ -219,14 +220,14 @@ export const InquiryForm = ({
       setSubmittedData(data);
 
       try {
-        const saved = localStorage.getItem("taaluf_inquiries");
+        const saved = localStorage.getItem("fahad_trips_inquiries");
         const currentInquiries = saved ? JSON.parse(saved) : [];
         currentInquiries.push({
           ...data,
           dateSubmitted: new Date().toISOString(),
         });
         localStorage.setItem(
-          "taaluf_inquiries",
+          "fahad_trips_inquiries",
           JSON.stringify(currentInquiries),
         );
       } catch (e) {
@@ -254,11 +255,11 @@ export const InquiryForm = ({
       <div className="mb-5 sm:mb-6">
         <h3 className="font-headline font-bold text-lg sm:text-xl text-luxury-dark flex items-center gap-2 mb-1">
           <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-luxury-brand shrink-0 animate-pulse" />
-          <span>صمّم ملاذكما الآمن مجانًا</span>
+          <span>صمّم ملاذكما الآمن وحجزكما المرتب مجانًا</span>
         </h3>
         <p className="text-[11px] sm:text-xs text-stone-500 leading-relaxed">
-          استقطع دقيقتين فقط لإخبارنا برؤيتك، ولندع نحن التخطيط المجهد يذوب
-          تمامًا.
+          استقطع دقيقتين فقط لإخبارنا برؤيتك لتجربتكما القادمة، ولندع نحن
+          التخطيط المجهد يذوب تمامًا.
         </p>
       </div>
 
@@ -289,7 +290,7 @@ export const InquiryForm = ({
         <div>
           <label className="text-xs font-headline font-bold text-stone-700 mb-1.5 flex items-center gap-1.5">
             <Phone className="w-3.5 h-3.5 text-luxury-brand shrink-0" />
-            <span>رقم جوال الواتساب تواصل فوري *</span>
+            <span>رقم جوال الواتساب للتواصل الفوري *</span>
           </label>
           <input
             type="text"
@@ -301,7 +302,8 @@ export const InquiryForm = ({
             )}
           />
           <span className="text-[10px] text-stone-400 font-sans mt-1 block leading-tight">
-            سيتواصل معك فريقنا بسرية تامة لتقديم المقترحات والمسارات المتاحة.
+            سيتواصل معك فريقنا بسرية تامة لتقديم المقترحات والمسارات المتاحة
+            للأزواج.
           </span>
           {errors.whatsappNumber?.message && (
             <p className="text-[10px] sm:text-[11px] text-rose-500 mt-1 font-sans font-medium">
@@ -313,7 +315,7 @@ export const InquiryForm = ({
         {/* خيارات الباقات */}
         <div>
           <label className="block text-xs font-headline font-bold text-stone-700 mb-2">
-            باقات الرفاهية المقترحة أو المبدئية:
+            باقات الرفاهية والانسجام المقترحة أو المبدئية:
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {Object.entries(PACKAGES_INFO).map(([key, name]) => (
@@ -363,12 +365,14 @@ export const InquiryForm = ({
         <div>
           <label className="text-xs font-headline font-bold text-stone-700 mb-1.5 flex items-center gap-1.5">
             <Shield className="w-3.5 h-3.5 text-luxury-brand shrink-0" />
-            <span>هل لديكم متطلبات خصوصية اجتماعية؟ (اختياري)</span>
+            <span>
+              هل لديكم متطلبات خصوصية اجتماعية معينة للأزواج؟ (اختياري)
+            </span>
           </label>
           <input
             type="text"
             {...register("privacyNeeds")}
-            placeholder="مثال: مسبح مغلق تماماً، فيلا معزولة"
+            placeholder="مثال: مسبح مغلق تماماً، فيلا معزولة، شواطئ مغطاة"
             className="w-full bg-stone-50 border border-stone-200 focus:ring-luxury-brand/20 rounded-xl sm:rounded-2xl py-2.5 sm:py-3 px-3 sm:px-4 text-sm text-stone-800 transition-all outline-none focus:bg-white focus:ring-4"
           />
         </div>
@@ -376,7 +380,8 @@ export const InquiryForm = ({
         {/* المفاجآت الرومانسية */}
         <div>
           <label className="block text-xs font-headline font-bold text-stone-700 mb-2 leading-tight">
-            هل تحبون تضمين مفاجآت وترتيبات رومانسية استثنائية صامتة؟ (اختياري)
+            هل تحبون تضمين مفاجآت وترتيبات رومانسية استثنائية صامتة من فريقنا؟
+            (اختياري)
           </label>
           <div className="space-y-1.5">
             {SURPRISE_OPTIONS.map((opt) => (
@@ -415,7 +420,7 @@ export const InquiryForm = ({
             <Landmark className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-luxury-brand shrink-0 mt-0.5" />
             <span className="leading-tight">
               الطلب يعتبر استشارة مجانية وسرية مبدئية ولا يترتب عليه أي التزام
-              مالي
+              مالي عبر رحلات فهد للأزواج
             </span>
           </div>
         </div>

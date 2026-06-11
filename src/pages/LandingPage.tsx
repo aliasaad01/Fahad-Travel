@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Navigation } from "../components/Navigation";
 import { Hero } from "../sections/Hero";
 import { Problem } from "../sections/Problem";
@@ -14,7 +14,6 @@ import { WhyChooseUs } from "../sections/WhyChooseUs";
 import { FearRemoval } from "../sections/FearRemoval";
 import { Testimonials } from "../sections/Testimonials";
 import { FAQ } from "../sections/FAQ";
-import { FinalCTA } from "../sections/FinalCTA";
 import { Footer } from "../sections/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 

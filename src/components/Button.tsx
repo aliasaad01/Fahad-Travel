@@ -6,7 +6,7 @@
 import React from "react";
 import { cn } from "../utils/cn";
 
-// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإبهام (Touch Devices)
+// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإبهام (Touch Devices) لباقات رحلات فهد
 const baseStyles =
   "inline-flex items-center justify-center font-headline font-semibold rounded-full border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] select-none touch-manipulation";
 
@@ -64,7 +64,7 @@ export const Button = ({
       disabled={disabled || isLoading}
       {...props}
     >
-      {/* مؤشر التحميل - متناسق تلمسياً وحجمياً مع مقاس الأيقونة */}
+      {/* مؤشر التحميل - متناسق تلمسياً وحجمياً مع مقاس الأيقونة في واجهة رحلات فهد */}
       {isLoading && (
         <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-current border-t-transparent rounded-full animate-spin shrink-0" />
       )}
@@ -76,7 +76,7 @@ export const Button = ({
         </span>
       )}
 
-      {/* نص الزر مع كسر السطور الآمن بالهواتف */}
+      {/* نص الزر مع كسر السطور الآمن بالهواتف لتجربة حجز سلسة */}
       <span className="whitespace-nowrap truncate max-w-full px-0.5">
         {children}
       </span>

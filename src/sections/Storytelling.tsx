@@ -17,12 +17,12 @@ export const Storytelling = () => {
       dir="rtl"
       id="story-emotional-section"
     >
-      {/* Decorative ambient blurs */}
+      {/* هالات ضوئية جمالية خافتة في الخلفية */}
       <div className="absolute -top-32 -left-32 w-64 h-64 sm:w-80 sm:h-80 bg-luxury-brand/5 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-          {/* Editorial Visual Frame Right - الصورة يمين في الديسكتوب وتتحرك للاسفل في الموبايل */}
+          {/* الإطار البصري الأيمن - الصورة تظهر في اليمين على الشاشات الكبيرة وأسفل النصوص في الهواتف */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -31,7 +31,7 @@ export const Storytelling = () => {
             className="lg:col-span-5 relative group order-2 lg:order-1 mt-4 lg:mt-0"
             id="storytelling-image-wrapper"
           >
-            {/* Soft decorative shadow framing */}
+            {/* إطار ظلي ناعم محيط بحاوية الصورة */}
             <div className="absolute -inset-1.5 bg-linear-to-tr from-luxury-brand/5 to-transparent rounded-2xl sm:rounded-3xl -rotate-1 scale-101 filter blur-xs pointer-events-none" />
 
             <div
@@ -47,7 +47,7 @@ export const Storytelling = () => {
               <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
             </div>
 
-            {/* Sticker with a deep emotional spark - Mobile Safe Positioning */}
+            {/* بطاقة الأثر العائمة المخصصة لتعزيز الأثر النفسي للرحلة */}
             <div
               className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-[#141416]/95 backdrop-blur-md border border-luxury-brand/15 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl max-w-55 sm:max-w-60 text-right transition-transform duration-300 md:group-hover:-translate-y-0.5"
               id="story-floating-badge"
@@ -59,13 +59,13 @@ export const Storytelling = () => {
                 </span>
               </div>
               <p className="text-stone-300 font-headline text-[11px] sm:text-xs font-semibold leading-relaxed">
-                عودة الارتياح الزوجي ليس ترفاً، بل هو شريان الحياة في زمن كثرت
-                فيه المشغلات الرقمية.
+                مع رحلات فهد، عودة الارتياح والترابط الزوجي ليس ترفاً، بل هو
+                شريان الحياة الأصيل لقصتكما.
               </p>
             </div>
           </motion.div>
 
-          {/* Emotional Copy Left Column - النصوص يسار في الديسكتوب وتظهر أولاً في الموبايل */}
+          {/* العمود النصي الأيسر - يحتوي على العناوين الرئيسية والفلسفة العميقة للرحلة */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export const Storytelling = () => {
               {storytelling.subtitle}
             </h3>
 
-            {/* Interactive Narrative paragraphs */}
+            {/* الفقرات السردية التفاعلية المأخوذة من ملف البيانات الموحد */}
             <div
               className="space-y-3.5 text-stone-400 text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8 max-w-xl font-sans"
               id="narrative-paragraphs"
@@ -98,7 +98,7 @@ export const Storytelling = () => {
               ))}
             </div>
 
-            {/* Premium Blockquote Card */}
+            {/* الكرت التحريري للاقتباس الفاخر */}
             <div
               className="bg-[#141416]/80 border-r-4 border-luxury-brand p-4 sm:p-5 rounded-l-2xl text-right max-w-xl shadow-2xl relative"
               id="editorial-quote-frame"

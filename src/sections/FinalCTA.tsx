@@ -5,7 +5,6 @@
 
 import { Heart, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { landingPageContent } from "../data/content";
 import { InquiryForm } from "../components/InquiryForm";
 import { Button } from "../components/Button";
 import { FaWhatsapp } from "react-icons/fa";
@@ -25,13 +24,12 @@ export const FinalCTA = ({
   selectedPackageId = "pkg-memory",
   onSuccessSubmit,
 }: FinalCTAProps) => {
-  const { finalCta } = landingPageContent;
-
   const handleWhatsAppDirect = () => {
-    const encoded = encodeURIComponent(
-      "مرحباً تآلُف، أود استشارة فورية لترتيب رحلة للأزواج في تركيا.",
-    );
-    window.open(`https://wa.me/963937237163?text=${encoded}`, "_blank");
+    // نص الرسالة متوافق تماماً مع رغبة العميل بالتخلص من الحيرة والبحث
+    const baseMsg =
+      "مرحباً رحلات فهد، أود التخلص من حيرة البحث وتصميم رحلة زوجية فاخرة ومخصصة لنا.";
+    const encoded = encodeURIComponent(baseMsg);
+    window.open(`https://wa.me/937237163?text=${encoded}`, "_blank");
   };
 
   return (
@@ -40,13 +38,13 @@ export const FinalCTA = ({
       dir="rtl"
       id="final-closing-section"
     >
-      {/* Visual background ambient details */}
+      {/* الخلفيات الجمالية المحيطة */}
       <div className="absolute top-0 right-1/3 w-64 h-64 sm:w-80 sm:h-80 bg-luxury-brand/10 rounded-full filter blur-[80px] sm:blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-1/3 w-64 h-64 sm:w-80 sm:h-80 bg-rose-900/10 rounded-full filter blur-[80px] sm:blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-          {/* Verbal closing argument column - Mobile Order 2 / Desktop Order 1 */}
+          {/* عمود المحتوى النصي والإقناعي - الموبايل أولاً */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,52 +52,57 @@ export const FinalCTA = ({
             transition={{ duration: 0.6 }}
             className="lg:col-span-6 text-right order-2 lg:order-1"
           >
+            {/* الشارة العلوية مستوحاة من كلمات العميل */}
             <div className="inline-flex items-center gap-1.5 bg-rose-500/10 border border-rose-500/30 rounded-full px-3 py-1 text-rose-300 mb-4 sm:mb-6 font-headline font-bold text-[10px] sm:text-xs">
               <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-current" />
-              <span>
-                {finalCta.headline.split("❤️")[0] || "استعيدوا دفء القرب الآن"}
-              </span>
+              <span>استعيدوا دفء القرب والراحة الأبدية</span>
               <span>❤️</span>
             </div>
 
-            <h2 className="font-headline font-extrabold text-xl sm:text-4xl text-white leading-tight mb-4 sm:mb-6">
-              تبدأ فصول الحكاية بلمسة شجاعة من يديك
+            {/* العنوان الموجه لإنهاء مشكلة الحيرة في البحث */}
+            <h2 className="font-headline font-extrabold text-xl sm:text-3xl lg:text-4xl text-white leading-tight mb-4 sm:mb-6">
+              احجز الآن وتخلص من كثرة البحث والحيرة
             </h2>
 
-            <p className="text-stone-300 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-lg font-sans">
-              {finalCta.subheadline}
+            {/* الوصف الفرعي المعبر عن الشغف والانسجام والراحة */}
+            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8 max-w-lg font-sans">
+              ودعوا عناء التنسيق وساعات الضياع بين المواقع؛ دعوا خبراء رحلات فهد
+              يرسمون لكم فصلاً استثنائياً من الراحة والأمان يرافقكما منذ لحظة
+              وصولكما إلى المطار وحتى العودة.
             </p>
 
-            {/* Micro value badges - Mobile Optimized Layout */}
+            {/* كروت القيمة المضافة لتوثيق الأمان والترتيب المضمون */}
             <div className="space-y-3 max-w-md mb-6 sm:mb-8">
+              {/* الكرت الأول: الموثوقية السعودية الرسمية المنظمة */}
               <div className="flex items-start gap-2.5 bg-white/5 border border-white/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                 <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-luxury-brand shrink-0 mt-0.5" />
                 <div className="text-right">
                   <h4 className="font-headline font-bold text-xs text-white">
-                    ضمان سرية وخصوصية العائلات
+                    وكالة سعودية رقمية معتمدة
                   </h4>
                   <p className="text-[10px] sm:text-xs text-stone-400 font-sans mt-0.5 leading-relaxed">
-                    معلوماتكم الشخصية وخطوط سير رحلتكم في تآلُف مغلقة تمامًا
-                    ومحاطة بالخصوصية المطلقة.
+                    نعمل برخص رسمية ومعايير تنظيمية صارمة لتضمنوا أعلى درجات
+                    الأمان المالي والقانوني لرحلتكم.
                   </p>
                 </div>
               </div>
 
+              {/* الكرت الثاني: ضمان الترتيب الكامل 100% لإزالة مخاوف البحث */}
               <div className="flex items-start gap-2.5 bg-white/5 border border-white/10 p-3 sm:p-4 rounded-xl sm:rounded-2xl">
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-luxury-brand shrink-0 mt-0.5" />
                 <div className="text-right">
                   <h4 className="font-headline font-bold text-xs text-white">
-                    تصميم مخصص ١٠٠٪ مجاناً
+                    تسافر بثقة وحجوزات مرتبة 100٪
                   </h4>
                   <p className="text-[10px] sm:text-xs text-stone-400 font-sans mt-0.5 leading-relaxed">
-                    مستشار الأزواج يصمم لك مسارًا مرناً ومفاجآت مبدئية مجانًا
-                    بالكامل قبل اتخاذ قرار الدفع.
+                    نعتني بكامل تفاصيل الطيران، الفنادق الفاخرة، والتنقلات الخاص
+                    لتنعم بحضور واثق وذهن صافٍ طوال الرحلة.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Swift WhatsApp secondary fallback under the verbal content */}
+            {/* الخيار البديل للتواصل عبر الواتساب مباشرة وبشكل ودي */}
             <div className="flex flex-col gap-2 relative max-w-sm">
               <p className="text-[10px] sm:text-xs text-stone-400 font-sans">
                 تفضل النقاش المباشر والودي دون نماذج؟
@@ -109,14 +112,14 @@ export const FinalCTA = ({
                 size="lg"
                 onClick={handleWhatsAppDirect}
                 rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
-                className="text-white text-xs py-3 sm:py-3.5 font-bold shadow-[0_4px_15px_rgba(37,211,102,0.1)] active:scale-95 transition-all"
+                className="text-white text-xs py-3 sm:py-3.5 font-bold shadow-[0_4px_15px_rgba(37,211,102,0.1)] active:scale-[0.99] transition-all"
               >
-                {finalCta.whatsappCtaText}
+                استشارة فورية عبر الواتساب
               </Button>
             </div>
           </motion.div>
 
-          {/* Golden inquiry card column - Mobile Order 1 / Desktop Order 2 */}
+          {/* نموذج الطلب الذهبي - الموضع الثاني في شاشات العرض الكبيرة */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}

@@ -29,17 +29,17 @@ export const Testimonials = () => {
       dir="rtl"
       id="testimonials-social-proof"
     >
-      {/* Decorative elements */}
+      {/* عناصر وتأثيرات بصرية خافتة في الخلفية */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 bg-luxury-brand/5 rounded-full filter blur-[80px] sm:blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
+        {/* هيدر قسم آراء وتقييمات عملاء رحلات فهد */}
         <div
           className="max-w-3xl mx-auto text-center mb-10 sm:mb-16"
           id="testimonials-header"
         >
           <span className="text-luxury-brand font-headline font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-amber-50/80 border border-luxury-accent/30 rounded-full px-3.5 py-1 inline-block mb-3 sm:mb-4">
-            قصص نجاح من عائلاتنا
+            قصص نجاح من أزواجنا وعائلاتنا
           </span>
           <h2 className="font-headline font-extrabold text-2xl sm:text-4xl text-luxury-dark mb-3 sm:mb-4 leading-tight">
             {testimonials.title}
@@ -49,13 +49,13 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Slider Container */}
+        {/* حاوية السلايدر لآراء الأزواج */}
         <div className="max-w-4xl mx-auto" id="testimonials-slider-box">
           <div
             className="relative bg-white border border-stone-200/50 rounded-2xl sm:rounded-3xl p-5 sm:p-10 shadow-sm min-h-88 sm:min-h-80 flex flex-col justify-between overflow-hidden"
             id="slider-body"
           >
-            {/* Quote Icon Background decoration */}
+            {/* أيقونة اقتباس تزيينية متناسقة في الخلفية */}
             <Quote className="w-14 h-14 sm:w-20 sm:h-20 text-stone-100 absolute top-3 left-3 pointer-events-none -scale-x-100 opacity-70" />
 
             <AnimatePresence mode="wait">
@@ -69,7 +69,7 @@ export const Testimonials = () => {
                 id={`testimonial-slide-${currentIndex}`}
               >
                 <div className="grow">
-                  {/* Rating Stars */}
+                  {/* النجوم الخماسية للتقييم الفاخر */}
                   <div className="flex gap-1 mb-4 sm:mb-5" id="stars-row">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -79,13 +79,13 @@ export const Testimonials = () => {
                     ))}
                   </div>
 
-                  {/* Body Text */}
+                  {/* نص المراجعة والشهادة المستورد ديناميكياً */}
                   <p className="text-stone-700 font-sans text-xs sm:text-base leading-relaxed mb-4 sm:mb-6 italic font-medium pl-2 sm:pl-0">
                     "{testimonials.items[currentIndex].reviewText}"
                   </p>
                 </div>
 
-                {/* Couple bio metadata */}
+                {/* البيانات الوصفية والتعريفية للزوجين */}
                 <div
                   className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-stone-100 pt-4 sm:pt-5 mt-auto"
                   id="couple-meta-info"
@@ -105,6 +105,7 @@ export const Testimonials = () => {
                     </div>
                   </div>
 
+                  {/* شارات الباقة المحجوزة ومدة الزواج الاستراتيجية لقسم التقييمات */}
                   <div
                     className="flex flex-wrap items-center gap-2 text-[9px] sm:text-[10px]"
                     id="trip-badge-info"
@@ -124,12 +125,12 @@ export const Testimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation Control elements */}
+          {/* عناصر تحكم التنقل والمؤشرات النقطية والسهمية المحسنة للـ RTL */}
           <div
             className="flex items-center justify-between mt-5 sm:mt-6 px-1 sm:px-4"
             id="slider-navigation-bar"
           >
-            {/* Indicator dots */}
+            {/* المؤشرات النقطية التفاعلية */}
             <div className="flex gap-1.5 sm:gap-2" id="navigation-dots">
               {testimonials.items.map((_, idx) => (
                 <button
@@ -145,7 +146,7 @@ export const Testimonials = () => {
               ))}
             </div>
 
-            {/* Arrow controllers adjusted for natural RTL movement */}
+            {/* أزرار الأسهم المحسنة للتوافق الطبيعي مع اتجاه RTL من اليمين لليسار */}
             <div className="flex gap-2" id="navigation-arrows">
               <button
                 onClick={prevTestimonial}

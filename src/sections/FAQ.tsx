@@ -26,7 +26,7 @@ export const FAQ = () => {
       id="faq-accordion-section"
     >
       <div className="container mx-auto px-4">
-        {/* Section Header */}
+        {/* هيدر القسم - تساؤلات رحلات فهد للأزواج */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <span className="text-luxury-brand font-headline font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-amber-50 border border-luxury-accent/30 rounded-full px-3.5 py-1 inline-block mb-3 sm:mb-4">
             تساؤلات تهمكما
@@ -39,7 +39,7 @@ export const FAQ = () => {
           </p>
         </div>
 
-        {/* Accordion Box */}
+        {/* صندوق الأكورديون التفاعلي للأسئلة الشائعة */}
         <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
           {faqs.items.map((item) => {
             const isOpen = openId === item.id;
@@ -52,14 +52,14 @@ export const FAQ = () => {
                   isOpen && "border-luxury-brand/30 shadow-sm",
                 )}
               >
-                {/* Accordion Trigger Header */}
+                {/* زر التحكم بفتح وإغلاق السؤال */}
                 <button
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full text-right py-4 px-4 sm:p-5 flex items-start justify-between gap-3 cursor-pointer focus:outline-none select-none"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-start gap-3">
-                    {/* Icon Box */}
+                    {/* أيقونة السؤال المصقولة */}
                     <div
                       className={cn(
                         "w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-stone-50 flex items-center justify-center text-stone-400 border border-stone-200/60 shrink-0 transition-colors duration-300 mt-0.5",
@@ -69,7 +69,7 @@ export const FAQ = () => {
                     >
                       <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
-                    {/* Question Text */}
+                    {/* نص السؤال المستورد من ملف المحتوى */}
                     <span
                       className={cn(
                         "font-headline font-bold text-xs sm:text-sm text-stone-700 transition-colors leading-tight sm:leading-normal pt-1",
@@ -80,7 +80,7 @@ export const FAQ = () => {
                     </span>
                   </div>
 
-                  {/* Arrow Icon */}
+                  {/* أيقونة السهم التفاعلية */}
                   <ChevronDown
                     className={cn(
                       "w-4 h-4 sm:w-5 sm:h-5 text-stone-400 transition-transform duration-300 shrink-0 mt-1",
@@ -89,7 +89,7 @@ export const FAQ = () => {
                   />
                 </button>
 
-                {/* Accordion Expandable Answer Body */}
+                {/* المحتوى المنسدل للإجابة مع أنيميشن سلس */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div

@@ -31,7 +31,7 @@ export const WhyChooseUs = () => {
       id="trust-why-us-section"
     >
       <div className="container mx-auto px-4">
-        {/* Section Header */}
+        {/* هيدر قسم مميزات رحلات فهد */}
         <div
           className="max-w-3xl mx-auto text-center mb-10 sm:mb-16"
           id="trust-header"
@@ -47,7 +47,7 @@ export const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* Bento Trust Grid */}
+        {/* شبكة بينتو الفاخرة لعرض ركائز الثقة والموثوقية */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto"
           id="trust-factors-grid"
@@ -69,7 +69,7 @@ export const WhyChooseUs = () => {
               >
                 <div>
                   <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5">
-                    {/* Icon Container with hover effect */}
+                    {/* حاوية الأيقونة التفاعلية مع تأثير التحويم */}
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-amber-50/70 border border-luxury-accent/40 flex items-center justify-center shrink-0 text-luxury-brand shadow-sm transition-transform duration-300 group-hover:scale-103">
                       {visualIcon}
                     </div>
@@ -83,17 +83,17 @@ export const WhyChooseUs = () => {
                     </div>
                   </div>
 
-                  {/* Details with solid border decoration */}
+                  {/* التفاصيل الإقناعية مع شريط زخرفي عمودي جانبي */}
                   <p className="text-xs text-stone-500 font-sans leading-relaxed text-right border-r-2 border-amber-200/60 pr-3 sm:pr-4 mb-2">
                     {item.details}
                   </p>
                 </div>
 
-                {/* Footer labels */}
+                {/* تذييل الكرت الداخلي لرحلات فهد */}
                 <div className="mt-4 flex items-center justify-between text-[9px] sm:text-[10px] text-stone-400 font-sans border-t border-stone-100 pt-3">
                   <span>تم الفرز الميداني بوعي تام</span>
                   <span className="font-headline font-medium text-luxury-brand/80">
-                    تآلُف للنخبة
+                    رحلات فهد للأزواج
                   </span>
                 </div>
               </motion.div>
