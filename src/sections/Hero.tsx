@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
 import { ArrowLeft, Heart, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { landingPageContent } from "../data/content";
@@ -25,7 +24,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
       // @ts-ignore
       window.dataLayer.push({
         event: "conversion_whatsapp_click",
-        buttonLocation: "Hero Section", // أو الفوتر حسب الكرت
+        buttonLocation: "Hero Section",
       });
     }
 
@@ -37,33 +36,27 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
 
   return (
     <section
-      // تدرج لوني دافئ وفخم يبدأ من العاجي الناعم ويمر بالرمادي الرملي لمنح طابع اتساع وانشراح
       className="relative min-h-screen flex items-center bg-linear-to-b from-[#FAF8F5] via-[#F4F0E6] to-[#EBE5D8] text-[#1A1A1E] pt-24 pb-12 sm:pb-16 overflow-hidden md:px-6 select-none"
       dir="rtl"
       id="hero-travel-section"
     >
-      {/* توهجات ضوئية ناعمة لكسر حدة الخلفية الفاتحة وإعطاء عمق بصري رومانسي */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,168,128,0.2),transparent_55%)] pointer-events-none" />
-      {/* Refactor: استبدال المتغير القديم بلون البراند البرونزي المدعوم بدقة للبلور */}
       <div className="absolute -bottom-48 -left-48 w-72 h-72 sm:w-96 sm:h-96 bg-[#8A6F48]/10 rounded-full filter blur-[100px] sm:blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 sm:gap-12 items-center">
-          {/* الكتلة النصية اليمنى */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col text-center sm:text-right justify-center order-1"
           >
-            {/* شارة التميز العلوية - خلفية برونزية شفافة مع نص واضح متناسق */}
             <div className="inline-flex items-center gap-1.5 bg-luxury-brand/15 border border-luxury-brand/30 rounded-full px-4 py-1.5 self-center sm:self-start mb-5 text-[#8A6F48] shadow-xs">
               <span className="text-[10px] sm:text-xs font-headline font-bold tracking-wide">
                 هل تعبت من كثر البحث في المواقع؟
               </span>
             </div>
 
-            {/* العنوان الرئيسي: تم توحيد الدرجة الداكنة الملكية العميقة #1A1A1E لتبرز بوضوح مذهل فوق الكريمي */}
             <h1
               className="font-headline font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#1A1A1E] leading-tight sm:leading-[1.2] mb-4 sm:mb-6 tracking-tight"
               id="hero-main-title"
@@ -71,13 +64,11 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               باقات رحلات فهد مخصصة للأزواج
             </h1>
 
-            {/* النص الفرعي التمهيدي: رمادي فخم داكن يحقق أعلى درجات التباين والراحة أثناء القراءة */}
             <p className="text-[#4A4A4F] text-xs sm:text-sm lg:text-base max-w-2xl leading-relaxed mb-6 sm:mb-8 font-sans">
               باقات فهد تفكك من كثر البحث في المواقع وتخليك مرتاح وواثق بنفسك
               طول الرحلة.
             </p>
 
-            {/* الأزرار التفاعلية لشاشات الكمبيوتر */}
             <div className="flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-md sm:max-w-none mx-auto sm:mx-0 w-full hidden lg:flex">
               <Button
                 data-track="whatsapp-booking-cta"
@@ -97,14 +88,12 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 leftIcon={
                   <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 transform rotate-180" />
                 }
-                // تعديل زر الـ Outline ليصبح بلون برونزي غامق متناغم تماماً مع هوية البراند الفاتحة
                 className="text-[#8A6F48] border-luxury-brand/50 hover:bg-[#8A6F48] hover:text-white hover:border-[#8A6F48] text-xs sm:text-sm py-3 sm:py-4 font-bold bg-white/40 backdrop-blur-xs transition-all duration-300"
               >
                 {hero.ctaSecondaryText}
               </Button>
             </div>
 
-            {/* عناصر الثقة والأمان - خط فاصل ناعم باللون الرمادي الدافئ */}
             <div className="grid-cols-1 sm:grid-cols-2 gap-3 border-t border-[#D6CFC4] pt-5 text-[#5A5A60] text-[11px] sm:text-xs font-medium text-right max-w-md sm:max-w-none mx-auto sm:mx-0 w-full hidden lg:grid">
               <div className="flex items-center gap-2 justify-center sm:justify-start hover:text-[#8A6F48] transition-colors">
                 <ShieldCheck className="w-4 h-4 text-[#8A6F48] shrink-0" />
@@ -117,7 +106,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             </div>
           </motion.div>
 
-          {/* الكتلة البصرية اليسرى (الصورة والبطاقة العائمة) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -126,7 +114,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
           >
             <div className="absolute inset-0 bg-linear-to-tr from-luxury-brand/15 filter blur-2xl rounded-3xl opacity-40 pointer-events-none" />
 
-            {/* إطار الصورة بلون أبيض ناصع نقي وظل ناعم جداً لفصلها عن الخلفية بشكل راقٍ */}
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-4/5 w-full max-w-72.5 sm:max-w-md shadow-2xl border-[3px] sm:border-[6px] border-white shadow-[#C4BCB0]/40 mb-6 lg:mb-0">
               <img
                 src={hero.heroImageUrl}
@@ -135,7 +122,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 referrerPolicy="no-referrer"
               />
 
-              {/* البطاقة العائمة: خلفية بيضاء بلورية فائقة النقاء مع نصوص متباينة للغاية وفخمة */}
               <div className="absolute bottom-2 right-2 left-2 sm:bottom-4 sm:right-4 sm:left-4 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-white shadow-xl text-right">
                 <p className="text-[#8A6F48] text-[9px] sm:text-[10px] font-sans font-bold uppercase tracking-wider mb-1">
                   لحظة حية للأزواج
@@ -148,7 +134,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               </div>
             </div>
 
-            {/* أزرار وعناصر الجوال متناسقة ومريحة للمس والعين */}
             <div className="flex flex-col gap-3 w-full max-w-72.5 sm:max-w-md lg:hidden">
               <Button
                 data-track="whatsapp-booking-cta"
@@ -173,7 +158,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 {hero.ctaSecondaryText}
               </Button>
 
-              {/* عوامل ثقة الجوال */}
               <div className="grid grid-cols-2 gap-2 pt-4 text-[#5A5A60] text-[10px] font-medium text-right w-full border-t border-[#D6CFC4] mt-2">
                 <div className="flex items-center gap-1.5 justify-start">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#8A6F48] shrink-0" />
@@ -189,7 +173,6 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
         </div>
       </div>
 
-      {/* نهاية القسم المتلاشية بنعومة تامّة مع الأقسام التالية */}
       <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-linear-to-t from-white/20 to-transparent pointer-events-none" />
     </section>
   );

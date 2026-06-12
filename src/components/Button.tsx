@@ -6,28 +6,22 @@
 import React from "react";
 import { cn } from "../utils/cn";
 
-// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإابهام (Touch Devices) لباقات رحلات فهد
 const baseStyles =
   "inline-flex items-center justify-center font-headline font-semibold rounded-full border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] select-none touch-manipulation";
 
 const variants = {
-  // Primary: تم تحويله للون الملكي الحجري الداكن الفخم بدلاً من المظلم القديم ليتناسب مع نصوص الثيم الفاتح
   primary:
     "bg-[#1A1A1E] text-[#FAF8F5] border-[#1A1A1E] md:hover:bg-[#2D2D32] md:hover:border-[#2D2D32] shadow-sm focus:ring-[#1A1A1E]",
 
-  // Secondary: تم تحويله للون البرونزي الدافئ (Quiet Luxury Bronze) لتأكيد الهوية البصرية الفاخرة
   secondary:
     "bg-[#8A6F48] text-white border-[#8A6F48] md:hover:bg-[#735C3A] md:hover:border-[#735C3A] shadow-sm focus:ring-[#8A6F48]",
 
-  // Outline: متناغم للغاية مع خلفيات الموقع الكريمية والعاجية ويدعم تأثير زجاجي ناعم
   outline:
     "bg-white/40 text-[#1A1A1E] border-[#C5A880]/40 md:hover:bg-[#1A1A1E] md:hover:text-[#FAF8F5] md:hover:border-[#1A1A1E] focus:ring-[#1A1A1E]",
 
-  // Whatsapp: تعديل درجة اللون الأخضر للحفاظ على ألوان الأكشن النقية الجاذبة والمتباينة
   whatsapp:
     "bg-[#20aa52] text-white border-[#1c9648] md:hover:bg-[#198741] shadow-[0_4px_14px_rgba(32,170,82,0.18)] focus:ring-[#20aa52]",
 
-  // Ghost: شفاف تماماً ويتفاعل بنعومة مع درجات العاجي عند التحويم
   ghost:
     "bg-transparent text-[#1A1A1E] border-transparent md:hover:bg-[#8A6F48]/5 focus:ring-[#1A1A1E]",
 };
@@ -73,24 +67,20 @@ export const Button = ({
       disabled={disabled || isLoading}
       {...props}
     >
-      {/* مؤشر التحميل - متناسق تلمسياً وحجمياً مع مقاس الأيقونة في واجهة رحلات فهد */}
       {isLoading && (
         <span className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-current border-t-transparent rounded-full animate-spin shrink-0" />
       )}
 
-      {/* الأيقونة اليسرى */}
       {!isLoading && leftIcon && (
         <span className="flex items-center shrink-0 w-4 h-4 sm:w-5 sm:h-5 justify-center">
           {leftIcon}
         </span>
       )}
 
-      {/* نص الزر مع كسر السطور الآمن بالهواتف لتجربة حجز سلسة */}
       <span className="whitespace-nowrap truncate max-w-full px-0.5">
         {children}
       </span>
 
-      {/* الأيقونة اليمنى */}
       {!isLoading && rightIcon && (
         <span className="flex items-center shrink-0 w-4 h-4 sm:w-5 sm:h-5 justify-center">
           {rightIcon}

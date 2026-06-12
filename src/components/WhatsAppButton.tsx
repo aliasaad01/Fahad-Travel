@@ -61,7 +61,7 @@ export const WhatsAppButton = ({
       // @ts-ignore
       window.dataLayer.push({
         event: "conversion_whatsapp_click",
-        buttonLocation: "WhatsAppButton Section", // أو الفوتر حسب الكرت
+        buttonLocation: "WhatsAppButton Section",
       });
     }
 
@@ -73,7 +73,6 @@ export const WhatsAppButton = ({
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end select-none max-w-[calc(100vw-2rem)]">
-      {/* نافذة المحادثة التفاعلية المنبثقة */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -81,15 +80,12 @@ export const WhatsAppButton = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            // Refactor: تعديل الخلفية والحدود لتدعم أسلوب العاج الفخم النقي الفاتح للموقع
             className="w-80 sm:w-85 max-w-[calc(100vw-2rem)] bg-[#FAF8F5] border border-[#D6CFC4]/60 rounded-2xl shadow-2xl overflow-hidden mb-3 text-right flex flex-col"
             dir="rtl"
           >
-            {/* الهيدر الخاص بصندوق المحادثة لرحلات فهد - لون حجري ملكي داكن */}
             <div className="bg-[#1A1A1E] p-3 sm:p-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="relative">
-                  {/* تعديل ألوان الـ Avatar ليتوافق مع ألوان النخبة البرونزية */}
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#8A6F48]/15 flex items-center justify-center font-bold font-headline text-sm sm:text-base text-luxury-brand border border-[#8A6F48]/40">
                     ف
                   </div>
@@ -114,7 +110,6 @@ export const WhatsAppButton = ({
               </button>
             </div>
 
-            {/* منطقة رسائل المحادثة - خلفية ناعمة مريحة جداً للعين */}
             <div className="p-3 sm:p-4 bg-[#FAF8F5] min-h-28 max-h-48 sm:max-h-55 overflow-y-auto flex flex-col gap-2.5">
               <div className="bg-white rounded-xl sm:rounded-2xl rounded-tr-none p-2.5 sm:p-3 shadow-xs border border-[#D6CFC4]/30 max-w-[90%] sm:max-w-[85%] text-[11px] sm:text-xs text-[#2D2D32] leading-relaxed self-start">
                 <p className="font-headline font-bold text-[#8A6F48] mb-0.5 sm:mb-1">
@@ -143,7 +138,6 @@ export const WhatsAppButton = ({
               )}
             </div>
 
-            {/* الخيارات السريعة وأزرار الإرسال */}
             <div className="p-3 sm:p-4 border-t border-[#D6CFC4]/40 bg-[#FAF8F5] flex flex-col gap-2">
               <p className="text-[9px] sm:text-[10px] text-stone-400 font-sans font-semibold mb-0.5">
                 اختر استفسارًا سريعًا لتواصل فوري معنا:
@@ -154,7 +148,6 @@ export const WhatsAppButton = ({
                     data-track="whatsapp-booking-cta"
                     key={idx}
                     onClick={() => handleSend(p.message)}
-                    // Refactor: تحويل تفتيح كرت الخيار السريع عند الحث ليأخذ لون البراند البرونزي الأنيق
                     className="flex items-center justify-between text-right text-[11px] sm:text-xs bg-white hover:bg-[#FAF8F5] border border-[#D6CFC4]/50 px-2.5 py-1.5 sm:py-2 rounded-xl text-[#2D2D32] font-headline font-bold transition-all hover:border-[#8A6F48] duration-200 group active:scale-[0.99] touch-manipulation shadow-xs"
                   >
                     <span>{p.text}</span>
@@ -163,7 +156,6 @@ export const WhatsAppButton = ({
                 ))}
               </div>
 
-              {/* زر الإرسال المباشر للرسالة العامة - لون واتساب الأساسي النقي */}
               <button
                 data-track="whatsapp-booking-cta"
                 onClick={() => handleSend(defaultMessage)}
@@ -184,7 +176,6 @@ export const WhatsAppButton = ({
         )}
       </AnimatePresence>
 
-      {/* الزر العائم الأساسي (الدائرة الخضراء للواتساب) */}
       <button
         data-track="whatsapp-booking-cta"
         onClick={() => setIsOpen(!isOpen)}

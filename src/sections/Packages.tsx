@@ -24,7 +24,7 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
       // @ts-ignore
       window.dataLayer.push({
         event: "conversion_whatsapp_click",
-        buttonLocation: "Packages Section", // أو الفوتر حسب الكرت
+        buttonLocation: "Packages Section",
       });
     }
 
@@ -55,15 +55,12 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
 
   return (
     <section
-      // Refactor: تحويل الخلفية للون العاجي الفاخر للامتداد الانسيابي للـ Quiet Luxury
       className="py-16 sm:py-20 bg-[#FAF8F5] text-[#2D2D32] relative select-none"
       dir="rtl"
       id="packages-experiences-section"
     >
       <div className="container mx-auto px-4">
-        {/* هيدر قسم الباقات والتجارب لرحلات فهد */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          {/* شارة علوية بلون برونزي شفاف متناسق تماماً */}
           <span className="text-[10px] sm:text-xs uppercase tracking-wider bg-[#8A6F48]/10 border border-luxury-brand/30 rounded-full px-3.5 py-1 inline-block mb-3 sm:mb-4 text-[#8A6F48] font-headline font-bold shadow-xs">
             تجاربنا المختارة بعناية للأزواج
           </span>
@@ -78,7 +75,6 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
           </p>
         </div>
 
-        {/* شبكة عرض كروت الباقات الفاخرة */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {packages.map((pkg, idx) => {
             const visualBadge = badges[idx] || "باقة مخصصة";
@@ -93,10 +89,8 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                // Refactor: تحويل الكرت من داكن كئيب إلى أبيض صافٍ فخم بظلال ناعمة دافئة
                 className="group bg-white border border-[#D6CFC4]/50 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl shadow-[#C4BCB0]/15 flex flex-col justify-between hover:border-[#8A6F48]/60 transition-all duration-300"
               >
-                {/* الجزء البصري - الصورة والشارات العلوية المحددة */}
                 <div className="relative aspect-4/3 sm:aspect-16/10 overflow-hidden bg-stone-100">
                   <img
                     src={pkg.imageUrl}
@@ -105,21 +99,17 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                     referrerPolicy="no-referrer"
                   />
 
-                  {/* تدرج ظلي متلاشي ناعم فوق الصورة */}
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
 
-                  {/* الشارة التفضيلية العلوية اليمنى المحدثة للزجاج الفاتح */}
                   <div className="absolute top-9 right-3 sm:top-12 sm:right-4 bg-white/95 backdrop-blur-md border border-[#D6CFC4]/40 py-1 px-2.5 sm:px-3 rounded-full flex items-center gap-1.5 text-[9px] sm:text-[10px] text-[#1A1A1E] font-sans font-bold max-w-[85%] sm:max-w-none truncate shadow-xs">
                     {visualBadgeIcon}
                     <span className="truncate">{visualBadge}</span>
                   </div>
 
-                  {/* شارة مدة الرحلة اليسرى - لون برونزي دافئ وجذاب جداً للأعين */}
                   <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-[#8A6F48] px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] text-white font-headline font-bold shadow-sm">
                     {pkg.duration}
                   </div>
 
-                  {/* نص العنوان ونوع الأجواء المتراكبة على الصورة بوضوح باهر */}
                   <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 text-right left-3 sm:left-4 z-10">
                     <span className="text-[10px] sm:text-[11px] text-luxury-brand uppercase block font-headline font-bold tracking-wider mb-0.5 drop-shadow-xs">
                       {pkg.vibe}
@@ -130,13 +120,11 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                   </div>
                 </div>
 
-                {/* محتوى وتفاصيل كرت الباقة */}
                 <div className="p-5 sm:p-6 grow flex flex-col justify-start bg-white">
                   <p className="text-[10px] sm:text-[11px] text-[#8A6F48] mb-1.5 font-headline font-bold tracking-wide">
                     الغاية الوجدانية للرحلة:
                   </p>
 
-                  {/* صندوق الغاية الوجدانية بخلفية رملية كريمية رائعة مقتبسة من الهيرو */}
                   <p className="text-xs text-[#2D2D32] bg-[#F4F0E6]/60 p-3 rounded-xl mb-4 sm:mb-5 font-sans font-medium leading-relaxed border-r-2 border-[#8A6F48]/60 pr-3">
                     {pkg.emotionalGoal}
                   </p>
@@ -162,7 +150,6 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                   </ul>
                 </div>
 
-                {/* تذييل الكرت بلون عاجي ناعم وأزرار الحجز والتحويل */}
                 <div className="p-5 sm:p-6 border-t border-[#D6CFC4]/30 bg-[#FAF8F5]">
                   <div className="flex justify-between items-center mb-4 text-xs">
                     <span className="text-[#5A5A60] font-sans font-medium">

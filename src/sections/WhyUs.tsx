@@ -11,7 +11,7 @@ export const WhyUs = () => {
   const features = [
     {
       badge: "الثقة والأمان",
-      icon: <ShieldCheck className="w-5 h-5 text-[#634E32]" />, // تغميق لون الأيقونة
+      icon: <ShieldCheck className="w-5 h-5 text-[#634E32]" />,
       points: [
         "نعتني بكل تفاصيل رحلتكم من لحظة الاستشارة الأولى وحتى العودة، مع فريق دعم يتابعكم خطوة بخطوة.",
         "خبرتنا الطويلة في تنظيم رحلات الأزواج تضمن لكم تجربة مريحة تماماً وذكريات محفورة في الوجدان.",
@@ -57,7 +57,6 @@ export const WhyUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              // تحسين الكرت: خلفية بيضاء صريحة بدلاً من الشفافة، وتعميق الحدود
               className="bg-white rounded-2xl p-6 sm:p-8 border border-[#D6CFC4] shadow-md flex flex-col justify-between group hover:border-[#8A6F48] transition-all duration-300"
             >
               <div>
@@ -65,7 +64,6 @@ export const WhyUs = () => {
                   <div className="w-10 h-10 rounded-full bg-[#8A6F48]/10 flex items-center justify-center border border-[#8A6F48]/30">
                     {item.icon}
                   </div>
-                  {/* تغميق نص الشارة لزيادة الوضوح */}
                   <span className="inline-block bg-[#8A6F48]/10 text-[#544129] border border-[#8A6F48]/30 rounded-full px-4 py-1 text-xs font-headline font-bold">
                     {item.badge}
                   </span>
@@ -75,7 +73,6 @@ export const WhyUs = () => {
                   {item.points.map((text, pIdx) => (
                     <div key={pIdx} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#8A6F48] shrink-0 mt-1" />
-                      {/* نص داكن جداً ومقروء بنسبة 100% */}
                       <p className="font-sans text-xs sm:text-sm text-[#222225] font-medium leading-relaxed">
                         {text}
                       </p>

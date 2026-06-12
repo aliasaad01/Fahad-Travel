@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Star, Quote, ChevronRight, ChevronLeft, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { landingPageContent } from "../data/content";
@@ -71,7 +71,6 @@ export const Testimonials = () => {
                     ))}
                   </div>
 
-                  {/* تغميق نص المراجعة بالكامل */}
                   <p className="text-[#111112] font-sans text-sm sm:text-lg leading-relaxed mb-4 sm:mb-6 font-bold pl-2 sm:pl-0">
                     "{testimonials.items[currentIndex].reviewText}"
                   </p>
@@ -94,7 +93,6 @@ export const Testimonials = () => {
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2 text-xs">
-                    {/* تعديل لون الخلفية والخط لشارات الباقات */}
                     <span className="bg-[#FAF8F5] text-[#111112] border border-[#8A6F48]/40 px-3 py-1 rounded-full font-headline font-bold shadow-3xs">
                       {testimonials.items[currentIndex].tripPackage}
                     </span>
@@ -126,7 +124,6 @@ export const Testimonials = () => {
             </div>
 
             <div className="flex gap-2">
-              {/* تغميق الأزرار والحدود للتحكم في السلايدر */}
               <button
                 onClick={prevTestimonial}
                 className="w-10 h-10 rounded-full bg-white border border-[#8A6F48] flex items-center justify-center text-[#8A6F48] hover:bg-[#8A6F48] hover:text-white transition-all cursor-pointer"

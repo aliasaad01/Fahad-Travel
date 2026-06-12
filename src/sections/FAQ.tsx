@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { HelpCircle, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { landingPageContent } from "../data/content";
@@ -64,7 +64,6 @@ export const FAQ = () => {
                     >
                       <HelpCircle className="w-4 h-4" />
                     </div>
-                    {/* تغميق نص السؤال المنسدل بالكامل */}
                     <span className="font-headline font-extrabold text-sm sm:text-base text-[#111112] pt-1 leading-normal">
                       {item.question}
                     </span>
@@ -87,7 +86,6 @@ export const FAQ = () => {
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                       className="overflow-hidden bg-[#FAF8F5] border-t border-[#D6CFC4]"
                     >
-                      {/* تغميق الإجابة لتكون واضحة جداً للقراءة للعميل الفاخر */}
                       <div className="p-4 sm:p-5 text-xs sm:text-sm text-[#222225] font-medium leading-relaxed font-sans text-right">
                         {item.answer}
                       </div>

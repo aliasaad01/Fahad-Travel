@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
 import { ArrowUp } from "lucide-react";
 import { Logo } from "../components/Logo";
 
@@ -33,7 +32,6 @@ export const Footer = () => {
             <Logo light />
           </div>
 
-          {/* روابط بنصوص بيضاء واضحة وحالة تحوم برونزية براقة */}
           <div className="grid grid-cols-2 gap-y-3 gap-x-6 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:gap-6 text-xs font-headline font-bold text-white text-center sm:text-right w-full md:w-auto px-4 sm:px-0">
             <button
               className="hover:text-luxury-brand transition-colors duration-200 cursor-pointer focus:outline-none"
@@ -98,7 +96,6 @@ export const Footer = () => {
               شروط الحجز والموافقات
             </span>
             <span className="hidden sm:inline text-stone-700">|</span>
-            {/* نص ترخيص واضح بلون فضي منير يقفل الصفحة بثقة */}
             <span className="text-stone-200 hover:text-luxury-brand select-all pt-1 sm:pt-0 font-bold font-sans tracking-wide transition-colors duration-200">
               مؤسسة عبدالله فهد مانع الدوسري (س.ت: 7038990573)
             </span>

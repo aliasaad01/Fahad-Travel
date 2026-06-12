@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
 import { ShieldCheck, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -29,7 +28,6 @@ export const AccreditationBanner = () => {
           <h4 className="font-headline font-bold text-xs sm:text-sm lg:text-base text-[#111112] tracking-wide flex flex-wrap items-center justify-center gap-2">
             <span>وكالة سفر وسياحة سعودية معتمدة ومصرحة من</span>
             <div className="flex items-center gap-1.5">
-              {/* شارات بنصوص واضحة وتكبير الخط قليلاً لراحة العين */}
               <span className="text-[#3E301E] bg-[#8A6F48]/15 px-2.5 py-0.5 rounded-md border border-[#8A6F48]/40 font-extrabold text-xs">
                 وزارة التجارة
               </span>
