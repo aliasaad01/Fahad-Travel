@@ -90,17 +90,17 @@ export const LandingPage = () => {
       {/* Why Choose Us Feature Cards */}
       <WhyUs />
 
-      {/* Trust & Accreditation Short Banner */}
-      <AccreditationBanner />
-
-      {/* Official Government Corporate Licenses */}
-      <Licenses />
-
       {/* Warm Social Testimonial review cards */}
       <Testimonials />
 
       {/* Elegant Accordion Q&A list */}
       <FAQ />
+
+      {/* Trust & Accreditation Short Banner */}
+      <AccreditationBanner />
+
+      {/* Official Government Corporate Licenses */}
+      <Licenses />
 
       {/* Minimal professional footer */}
       <Footer />
