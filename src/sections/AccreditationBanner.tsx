@@ -33,12 +33,6 @@ export const AccreditationBanner = () => {
               <span className="text-[#3E301E] bg-[#8A6F48]/15 px-2.5 py-0.5 rounded-md border border-[#8A6F48]/40 font-extrabold text-xs">
                 وزارة التجارة
               </span>
-              <span className="text-[#111112] font-sans text-xs font-bold">
-                و
-              </span>
-              <span className="text-[#3E301E] bg-[#8A6F48]/15 px-2.5 py-0.5 rounded-md border border-[#8A6F48]/40 font-extrabold text-xs">
-                وزارة السياحة
-              </span>
             </div>
           </h4>
 
