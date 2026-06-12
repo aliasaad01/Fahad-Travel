@@ -19,6 +19,16 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
   const { hero } = landingPageContent;
 
   const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "Hero Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     const encoded = encodeURIComponent(
       "رحلات فهد للأزواج. أود الحصول على استشارة حول تنظيم وتصميم رحلة فاخرة لنا.",
     );
@@ -70,6 +80,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             {/* الأزرار التفاعلية لشاشات الكمبيوتر */}
             <div className="flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-md sm:max-w-none mx-auto sm:mx-0 w-full hidden lg:flex">
               <Button
+                data-track="whatsapp-booking-cta"
                 variant="whatsapp"
                 size="lg"
                 shimmer
@@ -140,6 +151,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             {/* أزرار وعناصر الجوال متناسقة ومريحة للمس والعين */}
             <div className="flex flex-col gap-3 w-full max-w-72.5 sm:max-w-md lg:hidden">
               <Button
+                data-track="whatsapp-booking-cta"
                 variant="whatsapp"
                 size="lg"
                 shimmer

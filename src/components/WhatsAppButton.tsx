@@ -55,6 +55,16 @@ export const WhatsAppButton = ({
   }, [isOpen]);
 
   const handleSend = (text: string) => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "WhatsAppButton Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     const cleanNumber = phoneNumber.replace(/[+\s-]/g, "");
     const encoded = encodeURIComponent(text);
     const url = `https://wa.me/${cleanNumber}?text=${encoded}`;
@@ -95,6 +105,7 @@ export const WhatsAppButton = ({
                 </div>
               </div>
               <button
+                data-track="whatsapp-booking-cta"
                 onClick={() => setIsOpen(false)}
                 className="text-white/70 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
                 aria-label="إغلاق المحادثة"
@@ -140,6 +151,7 @@ export const WhatsAppButton = ({
               <div className="flex flex-col gap-1.5">
                 {presets.map((p, idx) => (
                   <button
+                    data-track="whatsapp-booking-cta"
                     key={idx}
                     onClick={() => handleSend(p.message)}
                     // Refactor: تحويل تفتيح كرت الخيار السريع عند الحث ليأخذ لون البراند البرونزي الأنيق
@@ -153,6 +165,7 @@ export const WhatsAppButton = ({
 
               {/* زر الإرسال المباشر للرسالة العامة - لون واتساب الأساسي النقي */}
               <button
+                data-track="whatsapp-booking-cta"
                 onClick={() => handleSend(defaultMessage)}
                 className="mt-1.5 w-full flex items-center justify-center gap-2 bg-[#20aa52] hover:bg-[#198741] text-white py-1.5 sm:py-2 px-4 rounded-xl text-[11px] sm:text-xs font-bold shadow-md shadow-green-600/10 transition-colors touch-manipulation"
               >
@@ -173,6 +186,7 @@ export const WhatsAppButton = ({
 
       {/* الزر العائم الأساسي (الدائرة الخضراء للواتساب) */}
       <button
+        data-track="whatsapp-booking-cta"
         onClick={() => setIsOpen(!isOpen)}
         className="relative group w-12 h-12 sm:w-14 sm:h-14 bg-[#20aa52] hover:bg-[#198741] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300/30 touch-manipulation"
         aria-label="تواصل معنا عبر الواتساب"

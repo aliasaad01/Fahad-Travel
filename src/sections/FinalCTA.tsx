@@ -25,6 +25,16 @@ export const FinalCTA = ({
   onSuccessSubmit,
 }: FinalCTAProps) => {
   const handleWhatsAppDirect = () => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "FinalCTA Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     // نص الرسالة متوافق تماماً مع رغبة العميل بالتخلص من الحيرة والبحث
     const baseMsg =
       "مرحباً رحلات فهد، أود التخلص من حيرة البحث وتصميم رحلة زوجية فاخرة ومخصصة لنا.";

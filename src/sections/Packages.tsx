@@ -18,6 +18,16 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
   const { packages } = landingPageContent;
 
   const handleWhatsAppInquiry = (msg: string) => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "Packages Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/966567000039?text=${encoded}`, "_blank");
   };
@@ -165,6 +175,7 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
 
                   <div className="space-y-2">
                     <Button
+                      data-track="whatsapp-booking-cta"
                       variant="whatsapp"
                       size="md"
                       onClick={() => handleWhatsAppInquiry(pkg.whatsappMessage)}

@@ -88,6 +88,16 @@ const SuccessPanel = ({
   selectedRequests: string[];
 }) => {
   const handleWhatsAppRedirect = () => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "InquiryForm Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     const msg = `مرحباً رحلات فهد للأزواج، قمت بإرسال طلبي للرحلة الخاصة بالاسم: ${data.fullName}. أرغب بمناقشة باقة: (${PACKAGES_INFO[data.preferredPackage]}) الآن وتنسيق البرنامج المخصص.`;
     window.open(
       `https://wa.me/966567000039?text=${encodeURIComponent(msg)}`,

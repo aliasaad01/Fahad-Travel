@@ -30,6 +30,16 @@ export const Navigation = ({
   }, []);
 
   const handleWhatsAppDirect = () => {
+    if (typeof window !== "undefined") {
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
+      window.dataLayer.push({
+        event: "conversion_whatsapp_click",
+        buttonLocation: "Navigation Section", // أو الفوتر حسب الكرت
+      });
+    }
+
     const encoded = encodeURIComponent(
       "مرحباً رحلات فهد للأزواج، أريد استشارتكم لتصميم رحلة استثنائية راقية تضمن لنا الخصوصية والرفاهية المطلقة.",
     );
@@ -55,6 +65,7 @@ export const Navigation = ({
         <div className="flex items-center gap-1.5 sm:gap-3">
           {/* زر اكتشف الباقات - تم توحيد اللون الحجري الداكن لتسهيل الرؤية التامة على الخلفية العاجية */}
           <Button
+            data-track="whatsapp-booking-cta"
             variant="ghost"
             size="sm"
             onClick={onExplorePackages}
@@ -71,6 +82,7 @@ export const Navigation = ({
 
           {/* زر استشارة واتساب - البطل الرئيسي المتاح دائماً لكل الشاشات والموبايل لرحلات فهد */}
           <Button
+            data-track="whatsapp-booking-cta"
             variant="whatsapp"
             size="sm"
             onClick={handleWhatsAppDirect}
