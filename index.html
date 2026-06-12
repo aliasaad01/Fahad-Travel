@@ -1,7 +1,18 @@
 <!doctype html>
-<!-- For collaboration visit my portfolio: https://ali-asaad-portfolio.vercel.app -->
 <html lang="ar" dir="rtl">
   <head>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M25DSF9B");
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,6 +67,14 @@
   <body
     class="bg-[#FAF8F5] text-[#111112] antialiased selection:bg-[#8A6F48]/20 selection:text-[#4A3A25] overflow-x-hidden"
   >
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M25DSF9B"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
