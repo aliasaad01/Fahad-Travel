@@ -71,23 +71,25 @@ export const WhatsAppButton = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 15, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="w-80 sm:w-85 max-w-[calc(100vw-2rem)] bg-luxury-cream border border-luxury-accent/30 rounded-2xl shadow-2xl overflow-hidden mb-3 text-right flex flex-col"
+            // Refactor: تعديل الخلفية والحدود لتدعم أسلوب العاج الفخم النقي الفاتح للموقع
+            className="w-80 sm:w-85 max-w-[calc(100vw-2rem)] bg-[#FAF8F5] border border-[#D6CFC4]/60 rounded-2xl shadow-2xl overflow-hidden mb-3 text-right flex flex-col"
             dir="rtl"
           >
-            {/* الهيدر الخاص بصندوق المحادثة لرحلات فهد */}
-            <div className="bg-luxury-dark p-3 sm:p-4 flex items-center justify-between text-luxury-cream">
+            {/* الهيدر الخاص بصندوق المحادثة لرحلات فهد - لون حجري ملكي داكن */}
+            <div className="bg-[#1A1A1E] p-3 sm:p-4 flex items-center justify-between text-white">
               <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="relative">
-                  <div className="w-9 h-9 sm:w-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-sm sm:text-base text-luxury-dark border-2 border-luxury-brand">
+                  {/* تعديل ألوان الـ Avatar ليتوافق مع ألوان النخبة البرونزية */}
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#8A6F48]/15 flex items-center justify-center font-bold font-headline text-sm sm:text-base text-luxury-brand border border-[#8A6F48]/40">
                     ف
                   </div>
-                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-luxury-dark rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#20aa52] border-2 border-[#1A1A1E] rounded-full"></span>
                 </div>
                 <div>
-                  <h4 className="font-headline font-bold text-xs sm:text-sm text-luxury-cream">
+                  <h4 className="font-headline font-bold text-xs sm:text-sm text-[#FAF8F5]">
                     مستشار رحلات فهد
                   </h4>
-                  <p className="text-[9px] sm:text-[10px] text-luxury-brand/90 font-sans">
+                  <p className="text-[9px] sm:text-[10px] text-luxury-brand font-sans font-medium">
                     مستشار السفر وتجارب النخبة للأزواج
                   </p>
                 </div>
@@ -101,17 +103,17 @@ export const WhatsAppButton = ({
               </button>
             </div>
 
-            {/* منطقة رسائل المحادثة */}
-            <div className="p-3 sm:p-4 bg-stone-50 min-h-28 max-h-48 sm:max-h-55 overflow-y-auto flex flex-col gap-2.5">
-              <div className="bg-white rounded-xl sm:rounded-2xl rounded-tr-none p-2.5 sm:p-3 shadow-sm border border-stone-100 max-w-[90%] sm:max-w-[85%] text-[11px] sm:text-xs text-stone-700 leading-relaxed self-start">
-                <p className="font-semibold text-luxury-brand mb-0.5 sm:mb-1">
+            {/* منطقة رسائل المحادثة - خلفية ناعمة مريحة جداً للعين */}
+            <div className="p-3 sm:p-4 bg-[#FAF8F5] min-h-28 max-h-48 sm:max-h-55 overflow-y-auto flex flex-col gap-2.5">
+              <div className="bg-white rounded-xl sm:rounded-2xl rounded-tr-none p-2.5 sm:p-3 shadow-xs border border-[#D6CFC4]/30 max-w-[90%] sm:max-w-[85%] text-[11px] sm:text-xs text-[#2D2D32] leading-relaxed self-start">
+                <p className="font-headline font-bold text-[#8A6F48] mb-0.5 sm:mb-1">
                   رحلات فهد للأزواج
                 </p>
                 {typing ? (
                   <div className="flex items-center gap-1 py-1">
-                    <span className="w-1.5 h-1.5 bg-luxury-brand rounded-full animate-bounce"></span>
-                    <span className="w-1.5 h-1.5 bg-luxury-brand rounded-full animate-bounce [animation-delay:0.2s]"></span>
-                    <span className="w-1.5 h-1.5 bg-luxury-brand rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                    <span className="w-1.5 h-1.5 bg-[#8A6F48] rounded-full animate-bounce"></span>
+                    <span className="w-1.5 h-1.5 bg-[#8A6F48] rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                    <span className="w-1.5 h-1.5 bg-[#8A6F48] rounded-full animate-bounce [animation-delay:0.4s]"></span>
                   </div>
                 ) : (
                   <p>
@@ -124,15 +126,15 @@ export const WhatsAppButton = ({
               </div>
 
               {!typing && (
-                <div className="self-end bg-[#E2F7CB] text-stone-800 text-[11px] sm:text-xs rounded-xl sm:rounded-2xl rounded-tl-none p-2 sm:p-2.5 shadow-sm max-w-[85%] sm:max-w-[80%]">
+                <div className="self-end bg-[#E2F7CB] text-[#1A1A1E] text-[11px] sm:text-xs rounded-xl sm:rounded-2xl rounded-tl-none p-2 sm:p-2.5 shadow-xs max-w-[85%] sm:max-w-[80%] font-medium">
                   أرغب في اختيار أحد البرامج وأحتاج استشارة سريعة ✨
                 </div>
               )}
             </div>
 
             {/* الخيارات السريعة وأزرار الإرسال */}
-            <div className="p-3 sm:p-4 border-t border-stone-100 bg-luxury-cream flex flex-col gap-2">
-              <p className="text-[9px] sm:text-[10px] text-stone-400 font-sans font-medium mb-0.5">
+            <div className="p-3 sm:p-4 border-t border-[#D6CFC4]/40 bg-[#FAF8F5] flex flex-col gap-2">
+              <p className="text-[9px] sm:text-[10px] text-stone-400 font-sans font-semibold mb-0.5">
                 اختر استفسارًا سريعًا لتواصل فوري معنا:
               </p>
               <div className="flex flex-col gap-1.5">
@@ -140,25 +142,26 @@ export const WhatsAppButton = ({
                   <button
                     key={idx}
                     onClick={() => handleSend(p.message)}
-                    className="flex items-center justify-between text-right text-[11px] sm:text-xs bg-white hover:bg-stone-50 border border-stone-200/80 px-2.5 py-1.5 sm:py-2 rounded-xl text-stone-700 font-headline font-semibold transition-all hover:border-luxury-brand duration-200 group active:scale-[0.99] touch-manipulation"
+                    // Refactor: تحويل تفتيح كرت الخيار السريع عند الحث ليأخذ لون البراند البرونزي الأنيق
+                    className="flex items-center justify-between text-right text-[11px] sm:text-xs bg-white hover:bg-[#FAF8F5] border border-[#D6CFC4]/50 px-2.5 py-1.5 sm:py-2 rounded-xl text-[#2D2D32] font-headline font-bold transition-all hover:border-[#8A6F48] duration-200 group active:scale-[0.99] touch-manipulation shadow-xs"
                   >
                     <span>{p.text}</span>
-                    <CornerDownLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-luxury-brand opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <CornerDownLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A6F48] opacity-0 group-hover:opacity-100 transition-opacity" />
                   </button>
                 ))}
               </div>
 
-              {/* زر الإرسال المباشر للرسالة العامة */}
+              {/* زر الإرسال المباشر للرسالة العامة - لون واتساب الأساسي النقي */}
               <button
                 onClick={() => handleSend(defaultMessage)}
-                className="mt-1.5 w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white py-1.5 sm:py-2 px-4 rounded-xl text-[11px] sm:text-xs font-semibold shadow-md shadow-green-500/10 transition-colors touch-manipulation"
+                className="mt-1.5 w-full flex items-center justify-center gap-2 bg-[#20aa52] hover:bg-[#198741] text-white py-1.5 sm:py-2 px-4 rounded-xl text-[11px] sm:text-xs font-bold shadow-md shadow-green-600/10 transition-colors touch-manipulation"
               >
                 <Send className="w-3.5 h-3.5 rotate-180" />
                 <span>إرسال استفسار عام مباشر عبر الواتساب</span>
               </button>
 
-              <div className="flex items-center justify-center gap-1 mt-1.5 text-[8px] sm:text-[9px] text-stone-400 font-sans">
-                <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-luxury-brand" />
+              <div className="flex items-center justify-center gap-1 mt-1.5 text-[8px] sm:text-[9px] text-stone-400 font-sans font-medium">
+                <ShieldCheck className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#8A6F48]" />
                 <span>
                   جميع تفاصيلكم ومناقشاتكم محاطة بالسرية والخصوصية التامة
                 </span>
@@ -171,10 +174,10 @@ export const WhatsAppButton = ({
       {/* الزر العائم الأساسي (الدائرة الخضراء للواتساب) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative group w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300/30 touch-manipulation"
+        className="relative group w-12 h-12 sm:w-14 sm:h-14 bg-[#20aa52] hover:bg-[#198741] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300/30 touch-manipulation"
         aria-label="تواصل معنا عبر الواتساب"
       >
-        <span className="absolute inset-0 rounded-full border-2 border-[#25D366] opacity-30 animate-ping group-hover:animate-none"></span>
+        <span className="absolute inset-0 rounded-full border-2 border-[#20aa52] opacity-30 animate-ping group-hover:animate-none"></span>
 
         {showBadge && (
           <span className="absolute -top-0.5 -right-0.5 w-4 h-4 sm:w-5 sm:h-5 bg-rose-500 border-2 border-white rounded-full flex items-center justify-center text-[8px] sm:text-[9px] font-sans font-bold text-white shadow-sm">

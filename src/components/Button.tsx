@@ -6,21 +6,30 @@
 import React from "react";
 import { cn } from "../utils/cn";
 
-// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإبهام (Touch Devices) لباقات رحلات فهد
+// 1. كلاسات القاعدة العامة التفاعلية مع دعم حماية الإابهام (Touch Devices) لباقات رحلات فهد
 const baseStyles =
   "inline-flex items-center justify-center font-headline font-semibold rounded-full border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96] select-none touch-manipulation";
 
 const variants = {
+  // Primary: تم تحويله للون الملكي الحجري الداكن الفخم بدلاً من المظلم القديم ليتناسب مع نصوص الثيم الفاتح
   primary:
-    "bg-luxury-dark text-luxury-cream border-luxury-dark md:hover:bg-stone-800 md:hover:border-stone-800 shadow-sm focus:ring-luxury-dark",
+    "bg-[#1A1A1E] text-[#FAF8F5] border-[#1A1A1E] md:hover:bg-[#2D2D32] md:hover:border-[#2D2D32] shadow-sm focus:ring-[#1A1A1E]",
+
+  // Secondary: تم تحويله للون البرونزي الدافئ (Quiet Luxury Bronze) لتأكيد الهوية البصرية الفاخرة
   secondary:
-    "bg-luxury-brand text-luxury-dark border-luxury-brand md:hover:bg-luxury-brand-hover md:hover:border-luxury-brand-hover shadow-sm focus:ring-luxury-brand",
+    "bg-[#8A6F48] text-white border-[#8A6F48] md:hover:bg-[#735C3A] md:hover:border-[#735C3A] shadow-sm focus:ring-[#8A6F48]",
+
+  // Outline: متناغم للغاية مع خلفيات الموقع الكريمية والعاجية ويدعم تأثير زجاجي ناعم
   outline:
-    "bg-transparent text-luxury-dark border-luxury-dark/20 md:hover:bg-luxury-dark md:hover:text-luxury-cream md:hover:border-luxury-dark focus:ring-luxury-dark",
+    "bg-white/40 text-[#1A1A1E] border-[#C5A880]/40 md:hover:bg-[#1A1A1E] md:hover:text-[#FAF8F5] md:hover:border-[#1A1A1E] focus:ring-[#1A1A1E]",
+
+  // Whatsapp: تعديل درجة اللون الأخضر للحفاظ على ألوان الأكشن النقية الجاذبة والمتباينة
   whatsapp:
-    "bg-[#25D366] text-white border-[#24c15d] md:hover:bg-[#20ba5a] shadow-[0_4px_14px_rgba(37,211,102,0.2)] focus:ring-[#25D366]",
+    "bg-[#20aa52] text-white border-[#1c9648] md:hover:bg-[#198741] shadow-[0_4px_14px_rgba(32,170,82,0.18)] focus:ring-[#20aa52]",
+
+  // Ghost: شفاف تماماً ويتفاعل بنعومة مع درجات العاجي عند التحويم
   ghost:
-    "bg-transparent text-luxury-dark border-transparent md:hover:bg-luxury-dark/5 focus:ring-luxury-dark",
+    "bg-transparent text-[#1A1A1E] border-transparent md:hover:bg-[#8A6F48]/5 focus:ring-[#1A1A1E]",
 };
 
 const sizes = {
@@ -58,7 +67,7 @@ export const Button = ({
         variants[variant],
         sizes[size],
         shimmer &&
-          "relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2.5s_infinite] before:bg-linear-to-r before:from-transparent before:via-white/15 before:to-transparent",
+          "relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2.5s_infinite] before:bg-linear-to-r before:from-transparent before:via-white/20 before:to-transparent",
         className,
       )}
       disabled={disabled || isLoading}

@@ -39,50 +39,43 @@ export const Navigation = ({
   return (
     <nav
       className={cn(
-        "fixed top-0 right-0 left-0 z-50 transition-all duration-300 bg-transparent py-4 select-none",
-        scrolled &&
-          "bg-[#1E1A17]/95 backdrop-blur-md py-2.5 shadow-md border-b border-white/5",
+        "fixed top-0 right-0 left-0 z-50 transition-all duration-300 bg-transparent py-4 select-none shadow-lg",
+        // Refactor: إزالة الظلال الداكنة واستبدالها بتأثير زجاجي بحدود عاجية بالغة النعومة والجمال
+        scrolled && "bg-[#FAF8F5]/95 backdrop-blur-md py-2.5 shadow-lg",
       )}
       dir="rtl"
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Branding Logo - مرن ومتجاوب يعكس هوية رحلات فهد */}
+        {/* Branding Logo - تم ضبط اللوجو ليتغير بناءً على التمرير أو ليلائم الثيم الفاتح */}
         <div className="shrink-0 scale-90 sm:scale-100 origin-right">
-          <Logo light href="#" />
+          <Logo light={!scrolled} href="#" />
         </div>
 
         {/* Action button menu - مرتب بنظام Mobile-First */}
         <div className="flex items-center gap-1.5 sm:gap-3">
-          {/* زر اكتشف الباقات - مخفي افتراضياً في الموبايل الصغير ويظهر من شاشات sm */}
+          {/* زر اكتشف الباقات - تم توحيد اللون الحجري الداكن لتسهيل الرؤية التامة على الخلفية العاجية */}
           <Button
             variant="ghost"
             size="sm"
             onClick={onExplorePackages}
             className={cn(
-              "text-[11px] sm:text-xs font-semibold text-white/80 hover:text-white hidden xs:inline-flex",
-              scrolled && "text-stone-300",
+              "text-[11px] sm:text-xs font-bold transition-colors hidden xs:inline-flex",
+              // التناوب بين اللون الحجري الملكي والبرونزي الدافئ عند التحويم
+              scrolled
+                ? "text-[#1A1A1E] hover:text-[#8A6F48]"
+                : "text-[#1A1A1E] hover:text-[#8A6F48]",
             )}
           >
             اكتشف الباقات الملهمة
           </Button>
-
-          {/* زر صمم برنامجي المخصص - يظهر فقط في الشاشات المتوسطة والكبيرة */}
-          {/* <Button
-            variant="secondary"
-            size="sm"
-            onClick={onOpenInquiry}
-            className="text-amber-950 text-[11px] sm:text-xs py-1.5 sm:py-2 font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all hidden md:inline-flex"
-          >
-            صمم برنامجي المخصص
-          </Button> */}
 
           {/* زر استشارة واتساب - البطل الرئيسي المتاح دائماً لكل الشاشات والموبايل لرحلات فهد */}
           <Button
             variant="whatsapp"
             size="sm"
             onClick={handleWhatsAppDirect}
-            rightIcon={<FaWhatsapp className="w-5 h-5 text-white" />}
-            className="text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 shadow-[0_4px_10px_rgba(37,211,102,0.15)] hover:scale-[1.02] active:scale-95 transition-all"
+            rightIcon={<FaWhatsapp className="w-4 h-4 sm:w-5 text-white" />}
+            className="text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 shadow-[0_4px_12px_rgba(32,170,82,0.18)] hover:scale-[1.02] active:scale-95 transition-all font-bold"
           >
             استشارة واتساب فورية
           </Button>

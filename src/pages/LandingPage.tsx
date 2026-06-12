@@ -6,16 +6,15 @@
 import { useState } from "react";
 import { Navigation } from "../components/Navigation";
 import { Hero } from "../sections/Hero";
-import { Problem } from "../sections/Problem";
-import { Storytelling } from "../sections/Storytelling";
 import { Stats } from "../sections/Stats";
 import { Packages } from "../sections/Packages";
-import { WhyChooseUs } from "../sections/WhyChooseUs";
-import { FearRemoval } from "../sections/FearRemoval";
 import { Testimonials } from "../sections/Testimonials";
 import { FAQ } from "../sections/FAQ";
 import { Footer } from "../sections/Footer";
 import { WhatsAppButton } from "../components/WhatsAppButton";
+import WhyUs from "../sections/WhyUs";
+import AccreditationBanner from "../sections/AccreditationBanner";
+import Licenses from "../sections/Licenses";
 
 // تعريف نوع الباقات بشكل صارم ومطابق للـ Zod Schema والفورم
 type PackageIdType =
@@ -66,7 +65,8 @@ export const LandingPage = () => {
 
   return (
     <div
-      className="min-h-screen bg-luxury-sand text-stone-800 selection:bg-amber-100 selection:text-amber-900 overflow-x-hidden"
+      // Refactor: تم توحيد الخلفية وتعديل ألوان الـ selection لتتطابق تماماً مع ألوان الـ Quiet Luxury الجديدة للموقع
+      className="min-h-screen bg-[#FAF8F5] text-[#1A1A1E] selection:bg-luxury-brand/30 selection:text-[#8A6F48] overflow-x-hidden"
       id="luxury-landing-root"
     >
       {/* Dynamic Sticky Header Navigation */}
@@ -81,37 +81,26 @@ export const LandingPage = () => {
         onOpenInquiry={handleOpenInquiryForm}
       />
 
-      {/* Empathy-centered Problem Context */}
-      <Problem />
-
-      {/* Emotional Connection Storytelling */}
-      <Storytelling />
-
-      {/* Dark Premium Metrics panel */}
+      {/* Premium Metrics panel */}
       <Stats />
 
       {/* Memory Package Offer Cards */}
       <Packages onSelectPackage={handleSelectPackage} />
 
-      {/* Values & Trust Pillars */}
-      <WhyChooseUs />
+      {/* Why Choose Us Feature Cards */}
+      <WhyUs />
 
-      {/* Security Protection / Fear Removal Tab Board */}
-      <FearRemoval />
+      {/* Trust & Accreditation Short Banner */}
+      <AccreditationBanner />
+
+      {/* Official Government Corporate Licenses */}
+      <Licenses />
 
       {/* Warm Social Testimonial review cards */}
       <Testimonials />
 
       {/* Elegant Accordion Q&A list */}
       <FAQ />
-
-      {/* Closing Interactive customized lead Customizer form */}
-      {/* <FinalCTA
-        selectedPackageId={selectedPackageId}
-        onSuccessSubmit={(data) => {
-          console.log("Elite travel lead customized:", data);
-        }}
-      /> */}
 
       {/* Minimal professional footer */}
       <Footer />

@@ -67,7 +67,7 @@ export const Problem = () => {
             </p>
 
             {/* شارات ومميزات تجربة رحلات فهد للأزواج */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-center text-[11px] text-luxury-brand font-headline font-medium">
+            {/* <div className="flex flex-wrap items-center gap-4 sm:gap-6 justify-center text-[11px] text-luxury-brand font-headline font-medium">
               <span className="bg-luxury-brand/5 px-2 py-1 rounded-md">
                 ✓ لا مجموعات سياحية خانقة
               </span>
@@ -79,7 +79,7 @@ export const Problem = () => {
               <span className="bg-luxury-brand/5 px-2 py-1 rounded-md">
                 ✓ لا مفاجآت مالية غامضة
               </span>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

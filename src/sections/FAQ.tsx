@@ -21,25 +21,23 @@ export const FAQ = () => {
 
   return (
     <section
-      className="py-16 sm:py-24 bg-luxury-sand text-stone-800 relative select-none"
+      className="py-16 sm:py-24 bg-linear-to-b from-[#FAF8F5] to-[#E2D9C8] text-[#111112] relative select-none"
       dir="rtl"
       id="faq-accordion-section"
     >
       <div className="container mx-auto px-4">
-        {/* هيدر القسم - تساؤلات رحلات فهد للأزواج */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-luxury-brand font-headline font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-amber-50 border border-luxury-accent/30 rounded-full px-3.5 py-1 inline-block mb-3 sm:mb-4">
+          <span className="text-[#4A3A25] font-headline font-bold text-xs bg-[#8A6F48]/15 border border-[#8A6F48]/40 rounded-full px-4 py-1 inline-block mb-3 sm:mb-4">
             تساؤلات تهمكما
           </span>
-          <h2 className="font-headline font-extrabold text-2xl sm:text-4xl text-luxury-dark mb-3 sm:mb-4">
+          <h2 className="font-headline font-extrabold text-2xl sm:text-4xl text-[#111112] mb-3 sm:mb-4">
             {faqs.title}
           </h2>
-          <p className="text-xs sm:text-sm text-stone-500 font-sans max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#333338] font-sans font-medium max-w-xl mx-auto leading-relaxed">
             {faqs.subtitle}
           </p>
         </div>
 
-        {/* صندوق الأكورديون التفاعلي للأسئلة الشائعة */}
         <div className="max-w-3xl mx-auto space-y-3 sm:space-y-4">
           {faqs.items.map((item) => {
             const isOpen = openId === item.id;
@@ -48,48 +46,38 @@ export const FAQ = () => {
               <div
                 key={item.id}
                 className={cn(
-                  "bg-white border border-stone-200/60 rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300",
-                  isOpen && "border-luxury-brand/30 shadow-sm",
+                  "bg-white border border-[#D6CFC4] rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300",
+                  isOpen && "border-[#8A6F48] shadow-md",
                 )}
               >
-                {/* زر التحكم بفتح وإغلاق السؤال */}
                 <button
                   onClick={() => toggleFAQ(item.id)}
-                  className="w-full text-right py-4 px-4 sm:p-5 flex items-start justify-between gap-3 cursor-pointer focus:outline-none select-none"
+                  className="w-full text-right py-4 px-4 sm:p-5 flex items-start justify-between gap-3 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-start gap-3">
-                    {/* أيقونة السؤال المصقولة */}
                     <div
                       className={cn(
-                        "w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-stone-50 flex items-center justify-center text-stone-400 border border-stone-200/60 shrink-0 transition-colors duration-300 mt-0.5",
-                        isOpen &&
-                          "text-luxury-brand bg-amber-50/70 border-luxury-accent/20",
+                        "w-7 h-7 rounded-lg bg-[#FAF8F5] flex items-center justify-center text-[#8A6F48] border border-[#D6CFC4] shrink-0 transition-colors duration-300 mt-0.5",
+                        isOpen && "text-white bg-[#8A6F48] border-[#8A6F48]",
                       )}
                     >
-                      <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      <HelpCircle className="w-4 h-4" />
                     </div>
-                    {/* نص السؤال المستورد من ملف المحتوى */}
-                    <span
-                      className={cn(
-                        "font-headline font-bold text-xs sm:text-sm text-stone-700 transition-colors leading-tight sm:leading-normal pt-1",
-                        isOpen && "text-luxury-dark",
-                      )}
-                    >
+                    {/* تغميق نص السؤال المنسدل بالكامل */}
+                    <span className="font-headline font-extrabold text-sm sm:text-base text-[#111112] pt-1 leading-normal">
                       {item.question}
                     </span>
                   </div>
 
-                  {/* أيقونة السهم التفاعلية */}
                   <ChevronDown
                     className={cn(
-                      "w-4 h-4 sm:w-5 sm:h-5 text-stone-400 transition-transform duration-300 shrink-0 mt-1",
-                      isOpen && "rotate-180 text-luxury-brand",
+                      "w-5 h-5 text-[#8A6F48] transition-transform duration-300 shrink-0 mt-1",
+                      isOpen && "rotate-180",
                     )}
                   />
                 </button>
 
-                {/* المحتوى المنسدل للإجابة مع أنيميشن سلس */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
@@ -97,9 +85,10 @@ export const FAQ = () => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
-                      className="overflow-hidden bg-stone-50/40 border-t border-stone-100"
+                      className="overflow-hidden bg-[#FAF8F5] border-t border-[#D6CFC4]"
                     >
-                      <div className="p-4 sm:p-5 text-xs sm:text-sm text-stone-600 leading-relaxed font-sans text-right">
+                      {/* تغميق الإجابة لتكون واضحة جداً للقراءة للعميل الفاخر */}
+                      <div className="p-4 sm:p-5 text-xs sm:text-sm text-[#222225] font-medium leading-relaxed font-sans text-right">
                         {item.answer}
                       </div>
                     </motion.div>

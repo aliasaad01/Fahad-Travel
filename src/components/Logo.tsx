@@ -19,9 +19,10 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
       <div
         className={cn(
           "w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center overflow-hidden transition-transform duration-500 md:group-hover:rotate-6 shrink-0 select-none",
+          // تنسيق لوني دقيق جداً يضمن فخامة الشعار في وضعي التصفح والسكرول
           light
-            ? "bg-luxury-brand text-luxury-dark shadow-[0_4px_12px_rgba(197,168,128,0.2)]"
-            : "bg-luxury-dark text-luxury-brand shadow-[0_4px_12px_rgba(25,22,20,0.15)]",
+            ? "bg-[#8A6F48] text-white shadow-[0_4px_12px_rgba(138,111,72,0.15)]"
+            : "bg-white text-[#1A1A1E] shadow-[0_4px_12px_rgba(26,26,30,0.06)] border border-luxury-brand/20",
         )}
       >
         <img
@@ -35,19 +36,10 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
       <div className="flex flex-col items-start leading-tight text-right select-none">
         <span
           className={cn(
-            "font-headline font-extrabold text-lg sm:text-xl tracking-tight leading-none mb-0.5",
-            light ? "text-luxury-cream" : "text-luxury-dark",
+            "font-headline font-extrabold text-lg sm:text-xl tracking-tight leading-none mb-0.5 transition-colors duration-300 text-[#8A6F48]",
           )}
         >
-          رحلات فهد
-        </span>
-        <span
-          className={cn(
-            "text-[7.5px] sm:text-[9px] tracking-widest sm:tracking-[0.15em] font-sans font-semibold uppercase leading-none block whitespace-nowrap mt-1",
-            light ? "text-luxury-accent/80" : "text-luxury-brand",
-          )}
-        >
-          رحلات فاخرة للأزواج
+          رحلات فهد للأزواج
         </span>
       </div>
     </>

@@ -23,22 +23,20 @@ export const Footer = () => {
 
   return (
     <footer
-      className="bg-[#12100E] text-stone-400 py-10 sm:py-12 border-t border-white/5 select-none"
+      className="bg-[#111112] text-stone-300 py-10 sm:py-12 border-t border-[#8A6F48]/30 select-none"
       dir="rtl"
       id="app-footer"
     >
       <div className="container mx-auto px-4">
-        {/* Top footer row - Centered on Mobile / Justified on Desktop */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 sm:pb-8 border-b border-white/5">
-          {/* Logo brand */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 sm:pb-8 border-b border-white/10">
           <div className="shrink-0 scale-95 sm:scale-100">
             <Logo light />
           </div>
 
-          {/* Core values & Navigation links - Mobile-First Layout */}
-          <div className="grid grid-cols-2 gap-y-3 gap-x-6 sm:flex sm:flex-wrap sm:items-center sm:gap-4 md:gap-6 text-[11px] sm:text-xs font-headline font-semibold text-stone-300 text-center sm:text-right w-full md:w-auto px-4 sm:px-0">
+          {/* روابط بنصوص بيضاء واضحة وحالة تحوم برونزية براقة */}
+          <div className="grid grid-cols-2 gap-y-3 gap-x-6 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-4 md:gap-6 text-xs font-headline font-bold text-white text-center sm:text-right w-full md:w-auto px-4 sm:px-0">
             <button
-              className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
+              className="hover:text-luxury-brand transition-colors duration-200 cursor-pointer focus:outline-none"
               onClick={() =>
                 handleScrollToSection("packages-experiences-section")
               }
@@ -47,61 +45,62 @@ export const Footer = () => {
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
-              className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
-              onClick={() => handleScrollToSection("problem-empathy-section")}
+              className="hover:text-luxury-brand transition-colors duration-200 cursor-pointer focus:outline-none"
+              onClick={() =>
+                handleScrollToSection("corporate-licenses-section")
+              }
             >
-              الفلسفة والغاية
+              الامتثال والموثوقية
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
-              className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
-              onClick={() => handleScrollToSection("fears-removal-section")}
+              className="hover:text-luxury-brand transition-colors duration-200 cursor-pointer focus:outline-none"
+              onClick={() => handleScrollToSection("why-us-section")}
             >
               الثقة والأمان
             </button>
             <span className="hidden sm:inline text-stone-600">•</span>
             <button
-              className="hover:text-luxury-brand transition-colors cursor-pointer text-center focus:outline-none"
+              className="hover:text-luxury-brand transition-colors duration-200 cursor-pointer focus:outline-none"
               onClick={() => handleScrollToSection("faq-accordion-section")}
             >
               أسئلة شائعة
             </button>
           </div>
 
-          {/* Quick scroll up */}
           <button
             onClick={handleScrollToTop}
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 hover:bg-luxury-brand/10 hover:text-luxury-brand border border-white/10 flex items-center justify-center transition-colors text-white cursor-pointer active:scale-95 focus:outline-none mt-2 md:mt-0"
+            className="w-10 h-10 rounded-full bg-white/10 hover:bg-luxury-brand hover:text-[#111112] border border-white/20 flex items-center justify-center transition-all text-white cursor-pointer"
             aria-label="الرجوع لأعلى الصفحة"
           >
-            <ArrowUp className="w-4 h-4" />
+            <ArrowUp className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Bottom row copyright details - Mobile Centered */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 sm:pt-8 text-[10px] text-stone-500 font-sans text-center md:text-right">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pt-6 sm:pt-8 text-[11px] text-stone-300 font-sans text-center lg:text-right">
           <div className="space-y-1">
-            <p className="leading-relaxed">
-              © {currentYear} رحلات فهد للأزواج - وكالة رقمية معتمدة. جميع
-              الحقوق محفوظة.
+            <p className="leading-relaxed font-medium">
+              © {currentYear} رحلات فهد للأزواج - وكالة سفر وسياحة رقمية معتمدة.
+              جميع الحقوق محفوظة.
             </p>
-            <p className="text-stone-600 leading-relaxed max-w-md mx-auto md:mx-0">
-              نهتم بكل تفاصيل رحلتكم من لحظة الحجز وحتى العودة لتسافروا بثقة
-              وحجوزات مرتبة 100٪.
+            <p className="text-stone-400 leading-relaxed max-w-md mx-auto lg:mx-0">
+              نهتم بكل تفاصيل رحلتكم الاستكشافية من لحظة الاستشارة الأولى وحتى
+              العودة لتسافروا بطمأنينة مطلقة وحجوزات رسمية مؤكدة 100٪.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 text-stone-600">
-            <span className="hover:text-stone-400 cursor-pointer transition-colors">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-3 text-stone-400 font-medium">
+            <span className="hover:text-white cursor-pointer transition-colors duration-200">
               سياسة الخصوصية والسرية
             </span>
             <span className="hidden sm:inline text-stone-700">|</span>
-            <span className="hover:text-stone-400 cursor-pointer transition-colors">
-              شروط الحجز المخصص
+            <span className="hover:text-white cursor-pointer transition-colors duration-200">
+              شروط الحجز والموافقات
             </span>
             <span className="hidden sm:inline text-stone-700">|</span>
-            <span className="text-stone-600 hover:text-stone-500 select-all pt-1 sm:pt-0 font-medium">
-              ترخيص سياحي رقمي معتمد (KSA-DIGITAL-98%)
+            {/* نص ترخيص واضح بلون فضي منير يقفل الصفحة بثقة */}
+            <span className="text-stone-200 hover:text-luxury-brand select-all pt-1 sm:pt-0 font-bold font-sans tracking-wide transition-colors duration-200">
+              مؤسسة عبدالله فهد مانع الدوسري (س.ت: 7038990573)
             </span>
           </div>
         </div>
