@@ -18,13 +18,10 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
   const { hero } = landingPageContent;
 
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined") {
-      // @ts-ignore
-      window.dataLayer = window.dataLayer || [];
-      // @ts-ignore
-      window.dataLayer.push({
-        event: "conversion_whatsapp_click",
-        buttonLocation: "Hero Section",
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", {
+        event_category: "Engagement",
+        event_label: "WhatsApp Consultation Button",
       });
     }
 

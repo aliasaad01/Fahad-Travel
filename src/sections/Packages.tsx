@@ -18,13 +18,10 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
   const { packages } = landingPageContent;
 
   const handleWhatsAppInquiry = (msg: string) => {
-    if (typeof window !== "undefined") {
-      // @ts-ignore
-      window.dataLayer = window.dataLayer || [];
-      // @ts-ignore
-      window.dataLayer.push({
-        event: "conversion_whatsapp_click",
-        buttonLocation: "Packages Section",
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "whatsapp_click", {
+        event_category: "Engagement",
+        event_label: "WhatsApp Consultation Button",
       });
     }
 
