@@ -49,9 +49,9 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 flex flex-col text-center sm:text-right justify-center order-1"
+            className="lg:col-span-7 flex flex-col text-center lg:text-right justify-center order-1"
           >
-            <div className="inline-flex items-center gap-1.5 bg-luxury-brand/15 border border-luxury-brand/30 rounded-full px-4 py-1.5 self-center sm:self-start mb-5 text-[#8A6F48] shadow-xs">
+            <div className="inline-flex items-center gap-1.5 bg-luxury-brand/15 border border-luxury-brand/30 rounded-full px-4 py-1.5 self-center lg:self-start mb-5 text-[#8A6F48] shadow-xs">
               <span className="text-[10px] sm:text-xs font-headline font-bold tracking-wide">
                 هل تعبت من كثر البحث في المواقع؟
               </span>
@@ -64,7 +64,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
               باقات رحلات فهد مخصصة للأزواج
             </h1>
 
-            <p className="text-[#4A4A4F] text-xs sm:text-sm lg:text-base max-w-2xl leading-relaxed mb-6 sm:mb-8 font-sans">
+            <p className="text-[#4A4A4F] text-xs sm:text-sm lg:text-base max-w-2xl leading-relaxed mb-6 sm:mb-8 font-sans mx-auto lg:mx-0">
               باقات فهد تفكك من كثر البحث في المواقع وتخليك مرتاح وواثق بنفسك
               طول الرحلة.
             </p>

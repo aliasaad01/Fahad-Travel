@@ -5,21 +5,22 @@
   --font-headline: "Cairo", sans-serif;
   --font-serif: "Playfair Display", serif;
 
-  --color-luxury-brand: #C5A880; /* Luxe Warm Gold */
-  --color-luxury-brand-hover: #B3966E;
+  --color-luxury-brand: #c5a880; /* Luxe Warm Gold */
+  --color-luxury-brand-hover: #b3966e;
   --color-luxury-dark: #191614; /* Pure Rich Charcoal Noir */
-  --color-luxury-charcoal: #2A2521; /* Slightly lighter body background slate */
-  --color-luxury-cream: #FDFCF7; /* Lighter warm paper color */
-  --color-luxury-sand: #FAF9F5; /* Base ground premium cream */
-  --color-luxury-accent: #E5D5C0; /* Soft gold-rose glow */
-  --color-luxury-rose: #9E5B5B; /* Deep passionate rose */
+  --color-luxury-charcoal: #2a2521; /* Slightly lighter body background slate */
+  --color-luxury-cream: #fdfcf7; /* Lighter warm paper color */
+  --color-luxury-sand: #faf9f5; /* Base ground premium cream */
+  --color-luxury-accent: #e5d5c0; /* Soft gold-rose glow */
+  --color-luxury-rose: #9e5b5b; /* Deep passionate rose */
 
   --animate-gold-shimmer: gold-shimmer 3s ease-in-out infinite;
   --animate-subtle-float: subtle-float 6s ease-in-out infinite;
 }
 
 @keyframes gold-shimmer {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -28,7 +29,8 @@
 }
 
 @keyframes subtle-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -42,7 +44,12 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-headline);
   letter-spacing: -0.02em;
 }
