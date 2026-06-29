@@ -92,7 +92,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
 
             {/* العنوان الرئيسي - متجاوب الألوان والحجم عبر الشاشات المختلفة */}
             <h1 className="font-headline font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white lg:text-[#1A1A1E] leading-tight md:leading-snug lg:leading-tight mb-3 tracking-tight drop-shadow-md lg:drop-shadow-none">
-              باقات رحلات فهد <br className="sm:hidden lg:block" /> مخصصة
+              باقات رحلات فهد مخصصة <br className="sm:hidden lg:block" />
               للأزواج
             </h1>
 
