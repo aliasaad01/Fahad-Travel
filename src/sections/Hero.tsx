@@ -86,7 +86,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             {/* الشارة العلوية (Badge) */}
             <div className="inline-flex items-center gap-1.5 bg-white/90 lg:bg-luxury-brand/15 border border-[#D6CFC4]/60 lg:border-luxury-brand/30 rounded-full px-3.5 py-1.5 mb-4 text-[#1A1A1E] lg:text-[#8A6F48] shadow-xs backdrop-blur-xs">
               <span className="text-[11px] sm:text-xs font-headline font-bold tracking-wide">
-                هل تبحث عن حلم البحث في المواقع؟
+                هل تعبت من كثر البحث في المواقع؟
               </span>
             </div>
 
@@ -98,7 +98,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
 
             {/* النص الوصفي */}
             <p className="text-[#4A4A4F] text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md lg:max-w-xl leading-relaxed mb-6 md:mb-8 font-sans drop-shadow-xs lg:drop-shadow-none">
-              باقات مهد تمكنك من أكثر البحث في المواقع وتخليك مرتاح وواثق بنفسك
+              باقات فهد تفكك من كثر البحث في المواقع وتخليك مرتاح وواثق بنفسك
               طول الرحلة.
             </p>
 
