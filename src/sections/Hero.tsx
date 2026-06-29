@@ -62,6 +62,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
           alt="رحلات فهد للأزواج"
           className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
+          loading="eager"
         />
         {/* قناع التدرج الذي يدمج الصورة بلون الخلفية الأساسي (#FAF8F5) */}
         <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/20 to-[#FAF8F5]" />
@@ -91,7 +92,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             </div>
 
             {/* العنوان الرئيسي - متجاوب الألوان والحجم عبر الشاشات المختلفة */}
-            <h1 className="font-headline font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white lg:text-[#1A1A1E] leading-tight md:leading-snug lg:leading-tight mb-3 tracking-tight drop-shadow-md lg:drop-shadow-none">
+            <h1 className="font-headline font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-white lg:text-[#1A1A1E] leading-tight md:leading-snug lg:leading-tight mb-3 tracking-tight drop-shadow-md lg:drop-shadow-none">
               باقات رحلات فهد مخصصة <br className="sm:hidden lg:block" />
               للأزواج
             </h1>
@@ -163,6 +164,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                       src={`https://flagcdn.com/${dest.code.toLowerCase()}.svg`}
                       alt={dest.name}
                       className="w-4 h-3 object-cover rounded-xs order-1 shrink-0"
+                      loading="eager"
                     />
                   </div>
                 ))}
@@ -198,6 +200,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                 alt="الأزواج في رحلة حالمة فريدة مع رحلات فهد"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="eager"
               />
               <div className="absolute bottom-4 right-4 left-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-xl text-right">
                 <p className="text-[#8A6F48] text-[10px] font-sans font-bold uppercase tracking-wider mb-1">

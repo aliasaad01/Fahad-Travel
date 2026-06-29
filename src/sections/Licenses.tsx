@@ -90,6 +90,7 @@ export const Licenses = () => {
                 src={"/images/qr-code.png"}
                 alt="رمز التحقق الرقمي للسجل التجاري"
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
               />
             </div>
 

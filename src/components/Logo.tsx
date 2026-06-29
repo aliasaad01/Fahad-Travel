@@ -26,6 +26,7 @@ export const Logo = ({ className = "", light = false, href }: LogoProps) => {
           src="/favicon.png"
           alt="رحلات فهد - Luxury Couples Travel Logo"
           className="w-full h-full object-cover rounded-full pointer-events-none"
+          loading="eager"
         />
       </div>
 

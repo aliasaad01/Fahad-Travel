@@ -94,6 +94,7 @@ export const Packages = ({ onSelectPackage }: PackagesProps) => {
                     alt={pkg.title}
                     className="w-full h-full object-cover transition-transform duration-[6s] ease-out group-hover:scale-103"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
 
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
