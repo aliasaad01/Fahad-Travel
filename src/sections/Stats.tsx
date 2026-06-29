@@ -26,9 +26,6 @@ export const Stats = () => {
       dir="rtl"
       id="statistics-section"
     >
-      <div className="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-luxury-brand/15 to-transparent pointer-events-none hidden sm:block"></div>
-      <div className="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-luxury-brand/15 to-transparent pointer-events-none hidden sm:block"></div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 sm:mb-16 max-w-2xl mx-auto">
           <h2 className="font-headline font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#1A1A1E] mb-3 tracking-tight">

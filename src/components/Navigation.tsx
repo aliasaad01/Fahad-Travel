@@ -59,21 +59,6 @@ export const Navigation = ({
         <div className="flex items-center gap-1.5 sm:gap-3">
           <Button
             data-track="whatsapp-booking-cta"
-            variant="ghost"
-            size="sm"
-            onClick={onExplorePackages}
-            className={cn(
-              "text-[11px] sm:text-xs font-bold transition-colors hidden xs:inline-flex",
-              scrolled
-                ? "text-[#1A1A1E] hover:text-[#8A6F48]"
-                : "text-[#1A1A1E] hover:text-[#8A6F48]",
-            )}
-          >
-            اكتشف الباقات الملهمة
-          </Button>
-
-          <Button
-            data-track="whatsapp-booking-cta"
             variant="whatsapp"
             size="sm"
             onClick={handleWhatsAppDirect}
