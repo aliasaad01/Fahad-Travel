@@ -62,7 +62,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
           alt="رحلات فهد للأزواج"
           className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
-          loading="eager"
+          fetchPriority="high"
         />
         {/* قناع التدرج الذي يدمج الصورة بلون الخلفية الأساسي (#FAF8F5) */}
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-[#FAF8F5]" />
@@ -164,7 +164,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
                       src={`https://flagcdn.com/${dest.code.toLowerCase()}.svg`}
                       alt={dest.name}
                       className="w-4 h-3 object-cover rounded-xs order-1 shrink-0"
-                      loading="eager"
+                      fetchPriority="high"
                     />
                   </div>
                 ))}
