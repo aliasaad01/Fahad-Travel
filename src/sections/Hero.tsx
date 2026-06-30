@@ -32,7 +32,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
   };
 
   const destinations = [
-    { name: "بريطانيا", code: "GB" },
+    { name: "لندن", code: "GB" },
     { name: "روسيا", code: "RU" },
     { name: "تركيا", code: "TR" },
     { name: "أذربيجان", code: "AZ" },
@@ -87,21 +87,21 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             {/* الشارة العلوية (Badge) */}
             <div className="inline-flex items-center gap-1.5 bg-white/90 lg:bg-luxury-brand/15 border border-[#D6CFC4]/60 lg:border-luxury-brand/30 rounded-full px-3.5 py-1.5 mb-4 text-[#1A1A1E] lg:text-[#8A6F48] shadow-xs backdrop-blur-xs">
               <span className="text-[11px] sm:text-xs font-headline font-bold tracking-wide">
-                هل تعبت من كثر البحث في المواقع؟
+                تخاف تحجز رحلة غير مناسبة وتفقد متعة إجازتك؟
               </span>
             </div>
 
+            {/* النص الوصفي */}
+            <p className="text-[#4A4A4F] text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md lg:max-w-xl leading-relaxed mb-3 font-sans drop-shadow-xs lg:drop-shadow-none">
+              في رحلات فهد نخطط لك كل تفاصيل رحلتك بعناية، لتسافر براحة وثقة،
+              وتستمتع بتجربة تستحق الذكرى.
+            </p>
+
             {/* العنوان الرئيسي - متجاوب الألوان والحجم عبر الشاشات المختلفة */}
-            <h1 className="font-headline font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-white lg:text-[#1A1A1E] leading-tight md:leading-snug lg:leading-tight mb-3 tracking-tight drop-shadow-md lg:drop-shadow-none">
+            <h1 className="font-headline font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-white lg:text-[#1A1A1E] leading-tight md:leading-snug lg:leading-tight mb-4 md:mb-6 tracking-tight drop-shadow-md lg:drop-shadow-none">
               باقات رحلات فهد مخصصة <br className="sm:hidden lg:block" />
               للأزواج
             </h1>
-
-            {/* النص الوصفي */}
-            <p className="text-[#4A4A4F] text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md lg:max-w-xl leading-relaxed mb-6 md:mb-8 font-sans drop-shadow-xs lg:drop-shadow-none">
-              باقات فهد تفكك من كثر البحث في المواقع وتخليك مرتاح وواثق بنفسك
-              طول الرحلة.
-            </p>
 
             {/* أزرار العمل التفاعلية - عمودية للهواتف وأفقية للتابلت والديسكتوب */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:max-w-md md:max-w-xl lg:max-w-none">

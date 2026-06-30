@@ -24,7 +24,7 @@
 
 ## 📸 Screenshots
 
-## ![Hero Section](public/fahadHomePage.png)
+## ![Hero Section](public/HomePage.png)
 
 ---
 

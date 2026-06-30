@@ -16,7 +16,7 @@ export const landingPageContent: LandingPageContent = {
     trustBullet2: "★ رعاية مستمرة 24/7 لمرافقتكم من المطار والعودة للديار",
     ctaPrimaryText: "تواصل عبر الواتساب للاستشارة",
     ctaSecondaryText: "اكتشف الباقات الملهمة",
-    heroImageUrl: "/images/hero.jpeg",
+    heroImageUrl: "/images/hero.webp",
   },
 
   problem: {
@@ -113,7 +113,7 @@ export const landingPageContent: LandingPageContent = {
         "صُممت لمن يريد أن يعيش تجربة متوازنة، مريحة، ومليئة باللحظات الجميلة بدون عناء التخطيط. ليست كل الرحلات تحتاج فخامة مبالغ فيها، بعض الرحلات تحتاج تنظيمًا ذكيًا ولمسة اهتمام لتبقى الذكرى خالدة.",
       vibe: "متوازنة ومريحة - ذكاء التنظيم ولمسة الاهتمام",
       duration: "رحلة مريحة واقتصادية بلمسة تنظيم متكاملة",
-      imageUrl: "/images/package1.jfif",
+      imageUrl: "/images/package1.webp",
       features: [
         {
           text: "إقامة مريحة في فنادق 4 نجوم مختارة بعناية فائقة",
@@ -136,7 +136,7 @@ export const landingPageContent: LandingPageContent = {
         "صُممت خصيصًا للأزواج الجدد الذين يريدون أكثر من مجرد سفر؛ يريدون إحساس البداية الجميلة. أماكن هادئة، أجواء رومانسية، وبرنامج مرن يترك لكما مساحة للخصوصية والذكريات بدون استعجال أو ازدحام.",
       vibe: "رومانسية هادئة - خصوصية تامة وإحساس البدايات",
       duration: "تجربة استثنائية مصممة للمتزوجين حديثاً",
-      imageUrl: "/images/package2.jfif",
+      imageUrl: "/images/package2.webp",
       features: [
         {
           text: "إقامة فاخرة في فنادق 5 نجوم بإطلالات ساحرة ومميزة",
@@ -159,7 +159,7 @@ export const landingPageContent: LandingPageContent = {
         "هذه ليست باقة عادية، بل تجربة مصممة للنخبة ومن لا يقبل إلا بالأفضل. تمنحك أعلى درجات الخصوصية المطلقة، الرفاهية المفرطة، والاعتناء اللامتناهي بالتفاصيل لأنك ضيفنا المميّز الذي يعرف قيمة الوقت.",
       vibe: "رفاهية مطلقة - خصوصية فائقة وأعلى درجات التفرد",
       duration: "برنامج سياحي مرن بالكامل ومصمم حسب رغبتك",
-      imageUrl: "/images/package3.jfif",
+      imageUrl: "/images/package3.webp",
       features: [
         {
           text: "إقامة راقية في أفخم الفنادق العالمية",

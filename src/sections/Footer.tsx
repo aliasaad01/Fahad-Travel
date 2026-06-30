@@ -64,15 +64,14 @@ export const Footer = () => {
             >
               أسئلة شائعة
             </button>
+            <button
+              onClick={handleScrollToTop}
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-luxury-brand hover:text-[#111112] border border-white/20 flex items-center justify-center transition-all text-white cursor-pointer"
+              aria-label="الرجوع لأعلى الصفحة"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </button>
           </div>
-
-          <button
-            onClick={handleScrollToTop}
-            className="w-10 h-10 rounded-full bg-white/10 hover:bg-luxury-brand hover:text-[#111112] border border-white/20 flex items-center justify-center transition-all text-white cursor-pointer"
-            aria-label="الرجوع لأعلى الصفحة"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </button>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pt-6 sm:pt-8 text-[11px] text-stone-300 font-sans text-center lg:text-right">

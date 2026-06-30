@@ -87,7 +87,7 @@ export const Licenses = () => {
           <div className="md:col-span-4 flex flex-col items-center justify-center bg-linear-to-b from-[#FAF8F5] to-[#F4F0E6]/70 p-5 rounded-xl border border-[#D6CFC4]/40 text-center">
             <div className="w-24 h-24 bg-white p-1.5 rounded-lg border border-[#D6CFC4]/50 shadow-2xs relative group mb-3 flex items-center justify-center overflow-hidden">
               <img
-                src={"/images/qr-code.png"}
+                src={"/images/qr-code.webp"}
                 alt="رمز التحقق الرقمي للسجل التجاري"
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
