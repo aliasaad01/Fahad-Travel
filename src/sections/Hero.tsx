@@ -65,7 +65,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
           loading="eager"
         />
         {/* قناع التدرج الذي يدمج الصورة بلون الخلفية الأساسي (#FAF8F5) */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/20 to-[#FAF8F5]" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/30 to-[#FAF8F5]" />
       </div>
 
       {/* 💻 خلفية الشاشات الكبيرة فقط (Desktop Only) */}
@@ -92,7 +92,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             </div>
 
             {/* النص الوصفي */}
-            <p className="text-[#4A4A4F] text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md lg:max-w-xl leading-relaxed mb-3 font-sans drop-shadow-xs lg:drop-shadow-none">
+            <p className="text-white/90 sm:text-[#4A4A4F] text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md lg:max-w-xl leading-relaxed mb-3 font-sans drop-shadow-xs lg:drop-shadow-none">
               في رحلات فهد نخطط لك كل تفاصيل رحلتك بعناية، لتسافر براحة وثقة،
               وتستمتع بتجربة تستحق الذكرى.
             </p>
