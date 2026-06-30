@@ -1,92 +1,6 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M25DSF9B");
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag.js?id=G-KK2LBX1ZWW"
-    ></script>
-
-    <!-- TikTok Pixel Code Start -->
-    <script>
-      !(function (w, d, t) {
-        w.TiktokAnalyticsObject = t;
-        var ttq = (w[t] = w[t] || []);
-        ((ttq.methods = [
-          "page",
-          "track",
-          "identify",
-          "instances",
-          "debug",
-          "on",
-          "off",
-          "once",
-          "ready",
-          "alias",
-          "group",
-          "enableCookie",
-          "disableCookie",
-          "holdConsent",
-          "revokeConsent",
-          "grantConsent",
-        ]),
-          (ttq.setAndDefer = function (t, e) {
-            t[e] = function () {
-              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
-            };
-          }));
-        for (var i = 0; i < ttq.methods.length; i++)
-          ttq.setAndDefer(ttq, ttq.methods[i]);
-        ((ttq.instance = function (t) {
-          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
-            ttq.setAndDefer(e, ttq.methods[n]);
-          return e;
-        }),
-          (ttq.load = function (e, n) {
-            var r = "https://analytics.tiktok.com/i18n/pixel/events.js",
-              o = n && n.partner;
-            ((ttq._i = ttq._i || {}),
-              (ttq._i[e] = []),
-              (ttq._i[e]._u = r),
-              (ttq._t = ttq._t || {}),
-              (ttq._t[e] = +new Date()),
-              (ttq._o = ttq._o || {}),
-              (ttq._o[e] = n || {}));
-            n = document.createElement("script");
-            ((n.type = "text/javascript"),
-              (n.async = !0),
-              (n.src = r + "?sdkid=" + e + "&lib=" + t));
-            e = document.getElementsByTagName("script")[0];
-            e.parentNode.insertBefore(n, e);
-          }));
-
-        ttq.load("D8MJEBBC77U5A3AIABAG");
-        ttq.page();
-      })(window, document, "ttq");
-    </script>
-    <!-- TikTok Pixel Code End -->
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-KK2LBX1ZWW");
-    </script>
-
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -111,7 +25,7 @@
       content="رحلات فهد للأزواج | باقات شهر عسل وتنظيم رحلات فاخرة"
     />
     <meta
-      property="og:description"
+      name="description"
       content="نهتم بكل تفاصيل رحلتكم الاستكشافية من لحظة الاستشارة وحتى العودة لتسافروا بطمأنينة مطلقة وحجوزات رسمية مؤكدة 100٪."
     />
     <meta property="og:image" content="https://fahad-travel.com/og-image.jpg" />
@@ -137,18 +51,99 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- تأخير ذكي لأكواد التتبع لحماية سرعة وأداء الموقع -->
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          // 1. تشغيل Google Tag Manager
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, "script", "dataLayer", "GTM-M25DSF9B");
+
+          // 2. تشغيل Google Analytics
+          var gaScript = document.createElement("script");
+          gaScript.async = true;
+          gaScript.src =
+            "https://www.googletagmanager.com/gtag.js?id=G-KK2LBX1ZWW";
+          document.head.appendChild(gaScript);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-KK2LBX1ZWW");
+
+          // 3. تشغيل TikTok Pixel
+          !(function (w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = (w[t] = w[t] || []);
+            ((ttq.methods = [
+              "page",
+              "track",
+              "identify",
+              "instances",
+              "debug",
+              "on",
+              "off",
+              "once",
+              "ready",
+              "alias",
+              "group",
+              "enableCookie",
+              "disableCookie",
+              "holdConsent",
+              "revokeConsent",
+              "grantConsent",
+            ]),
+              (ttq.setAndDefer = function (t, e) {
+                t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                };
+              }));
+            for (var i = 0; i < ttq.methods.length; i++)
+              ttq.setAndDefer(ttq, ttq.methods[i]);
+            ((ttq.instance = function (t) {
+              for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+                ttq.setAndDefer(e, ttq.methods[n]);
+              return e;
+            }),
+              (ttq.load = function (e, n) {
+                var r = "https://analytics.tiktok.com/i18n/pixel/events.js",
+                  o = n && n.partner;
+                ((ttq._i = ttq._i || {}),
+                  (ttq._i[e] = []),
+                  (ttq._i[e]._u = r),
+                  (ttq._t = ttq._t || {}),
+                  (ttq._t[e] = +new Date()),
+                  (ttq._o = ttq._o || {}),
+                  (ttq._o[e] = n || {}));
+                n = document.createElement("script");
+                ((n.type = "text/javascript"),
+                  (n.async = !0),
+                  (n.src = r + "?sdkid=" + e + "&lib=" + t));
+                e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(n, e);
+              }));
+            ttq.load("D8MJEBBC77U5A3AIABAG");
+            ttq.page();
+          })(window, document, "ttq");
+        }, 2500); // تأخير تحميل كل السكريبتات لمدة ثانيتين ونصف لحماية معالج الموبايل
+      });
+    </script>
   </head>
   <body
     class="bg-[#FAF8F5] text-[#111112] antialiased selection:bg-[#8A6F48]/20 selection:text-[#4A3A25] overflow-x-hidden"
   >
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M25DSF9B"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    <!-- سيتم حقن الـ GTM NoScript سحابياً تلقائياً بعد التحميل -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
