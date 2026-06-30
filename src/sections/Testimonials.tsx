@@ -83,9 +83,9 @@ export const Testimonials = () => {
                         "C"}
                     </div>
                     <div className="text-right">
-                      <h4 className="font-headline font-extrabold text-sm text-[#111112]">
+                      <p className="font-headline font-extrabold text-sm text-[#111112]">
                         {testimonials.items[currentIndex].name}
-                      </h4>
+                      </p>
                       <p className="text-xs text-[#333338] font-sans font-bold mt-0.5">
                         {testimonials.items[currentIndex].location}
                       </p>
@@ -114,11 +114,12 @@ export const Testimonials = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  className={`h-4 rounded-full transition-all duration-300 cursor-pointer ${
                     idx === currentIndex
-                      ? "bg-[#8A6F48] w-6"
-                      : "bg-[#D6CFC4] w-2"
+                      ? "bg-[#8A6F48] w-8"
+                      : "bg-[#D6CFC4] w-4"
                   }`}
+                  aria-label="slider-btn"
                 />
               ))}
             </div>
@@ -127,12 +128,14 @@ export const Testimonials = () => {
               <button
                 onClick={prevTestimonial}
                 className="w-10 h-10 rounded-full bg-white border border-[#8A6F48] flex items-center justify-center text-[#8A6F48] hover:bg-[#8A6F48] hover:text-white transition-all cursor-pointer"
+                aria-label="pervious btn"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
               <button
                 onClick={nextTestimonial}
                 className="w-10 h-10 rounded-full bg-white border border-[#8A6F48] flex items-center justify-center text-[#8A6F48] hover:bg-[#8A6F48] hover:text-white transition-all cursor-pointer"
+                aria-label="next btn"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>

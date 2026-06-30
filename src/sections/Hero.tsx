@@ -175,7 +175,7 @@ export const Hero = ({ onExplorePackages, onOpenInquiry }: HeroProps) => {
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-6 md:mt-8 border-t border-[#D6CFC4] pt-4 w-full justify-center lg:justify-start text-xs font-bold lg:font-medium text-[#5A5A60]">
               <span>تابي وتمارا - سافر الآن وادفع لاحقاً</span>
               <div className="flex gap-3">
-                <div className="bg-white border border-[#EBE5D8]/50 px-6 py-2 rounded-2xl shadow-2xs flex items-center justify-center h-11 w-28 text-[#00E5A3] font-sans font-black text-xl tracking-tight select-none">
+                <div className="bg-white border border-[#EBE5D8]/50 px-6 py-2 rounded-2xl shadow-2xs flex items-center justify-center h-11 w-28 text-[#08b684] font-sans font-black text-xl tracking-tight select-none">
                   tabby
                 </div>
                 <div className="bg-white border border-[#EBE5D8]/50 px-3 py-2 rounded-2xl shadow-2xs flex items-center justify-center h-11 w-28 select-none">
